@@ -1,0 +1,991 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ZURU LAB TREND WATCH</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #ffffff;
+    --card: #ffffff;
+    --ink: #111111;
+    --ink-2: #4b5563;
+    --ink-3: #9ca3af;
+    --line: #ececec;
+    --red: #D6001C;
+    --red-soft: #FDECEE;
+    --neutral-soft: #f4f4f5;
+    --radius: 12px;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: "Inter", -apple-system, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+    background: var(--bg);
+    color: var(--ink);
+    line-height: 1.55;
+  }
+  .wrap { max-width: 1720px; margin: 0 auto; padding: 0 24px 80px; }
+
+  /* ---------- Header ---------- */
+  header.site {
+    padding: 40px 0 8px;
+  }
+  header.site h1 { font-size: 32px; font-weight: 800; letter-spacing: -0.8px; }
+  header.site h1 .red { color: var(--red); }
+  header.site .meta { color: var(--ink-3); font-size: 12.5px; margin-top: 8px; font-weight: 500; }
+
+  /* ---------- Category filter ---------- */
+  .filters {
+    display: flex; flex-wrap: wrap; gap: 10px;
+    margin: 20px 0 4px;
+    padding-bottom: 18px;
+    border-bottom: 1px solid var(--line);
+  }
+  .chip {
+    display: inline-flex; align-items: center; gap: 7px;
+    background: var(--card); color: var(--ink-2);
+    border: 1px solid var(--line); border-radius: 999px;
+    padding: 7px 16px; font-size: 13.5px; font-weight: 600;
+    cursor: pointer; transition: all .15s;
+  }
+  .chip .n {
+    background: var(--neutral-soft); color: var(--ink-3);
+    font-size: 11.5px; font-weight: 700;
+    padding: 1px 8px; border-radius: 999px;
+  }
+  .chip:hover { border-color: var(--ink-2); color: var(--ink); }
+  .chip.on {
+    background: var(--red); border-color: var(--red); color: #fff;
+  }
+  .chip.on .n { background: rgba(255,255,255,.2); color: #fff; }
+
+  /* ---------- Category section ---------- */
+  section.cat { margin-top: 34px; }
+  .cat-head {
+    display: flex; align-items: center; gap: 12px;
+    border-bottom: 2px solid var(--ink); padding-bottom: 10px;
+  }
+  .cat-head h2 { font-size: 22px; font-weight: 800; letter-spacing: -0.4px; display: flex; align-items: center; }
+  .cat-head h2::before {
+    content: ""; display: inline-block;
+    width: 10px; height: 10px; background: var(--red);
+    margin-right: 10px; flex-shrink: 0;
+  }
+  .cat-head .count { color: var(--ink-3); font-size: 13px; font-weight: 500; margin-left: auto; }
+
+  /* ---------- Trend group ---------- */
+  .trend { margin-top: 26px; }
+  .trend-head {
+    background: var(--red-soft);
+    border-left: 4px solid var(--red);
+    border-radius: 0 8px 8px 0;
+    padding: 10px 14px;
+    display: flex; flex-wrap: wrap; align-items: baseline; gap: 10px;
+  }
+  .trend-head .t-label {
+    font-size: 10.5px; font-weight: 700; letter-spacing: 1.4px;
+    color: var(--red); text-transform: uppercase;
+  }
+  .trend-head h3 { font-size: 17px; font-weight: 700; color: var(--ink); letter-spacing: -0.2px; }
+  .trend-head .t-count { color: var(--ink-3); font-size: 12.5px; }
+  .trend-summary {
+    color: var(--ink-2); font-size: 13.5px; margin: 8px 2px 0;
+  }
+
+  /* ---------- Card grid (5-6 per row) ---------- */
+  .grid {
+    margin-top: 16px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 16px;
+  }
+  .card {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    overflow: hidden;
+    display: flex; flex-direction: column;
+  }
+  .card:hover { box-shadow: 0 6px 24px rgba(0,0,0,.06); border-color: #e0e0e0; }
+
+  /* media 3:4 */
+  .media {
+    position: relative;
+    aspect-ratio: 3 / 4;
+    background: #fafafa;
+    overflow: hidden;
+  }
+  .media img, .media video {
+    width: 100%; height: 100%; object-fit: cover; display: block;
+  }
+  /* landscape images: show complete, never crop */
+  .media img.fit {
+    object-fit: contain;
+    background: #fff;
+  }
+  .media.contain img, .media.contain video { object-fit: contain; background: #fff; }
+
+  /* carousel */
+  .car { position: relative; height: 100%; }
+  .car .slide { position: absolute; inset: 0; opacity: 0; transition: opacity .25s; pointer-events: none; }
+  .car .slide.on { opacity: 1; pointer-events: auto; }
+  .car .dots {
+    position: absolute; top: 10px; left: 50%; transform: translateX(-50%);
+    display: flex; gap: 6px; z-index: 3;
+  }
+  .car .dots i {
+    width: 7px; height: 7px; border-radius: 50%;
+    background: rgba(255,255,255,.55); border: 1px solid rgba(0,0,0,.12);
+    cursor: pointer;
+  }
+  .car .dots i.on { background: var(--red); border-color: var(--red); }
+  .car .arrow {
+    position: absolute; top: 50%; transform: translateY(-50%);
+    width: 30px; height: 30px; border-radius: 50%;
+    background: rgba(255,255,255,.9); border: none;
+    font-size: 14px; cursor: pointer; z-index: 3;
+    display: flex; align-items: center; justify-content: center;
+    color: var(--ink);
+  }
+  .car .arrow.prev { left: 8px; }
+  .car .arrow.next { right: 8px; }
+
+  /* card body */
+  .body { padding: 12px 14px 14px; display: flex; flex-direction: column; gap: 7px; flex: 1; }
+  .brand {
+    align-self: flex-start;
+    background: var(--neutral-soft); color: var(--ink-2);
+    font-size: 11px; font-weight: 700; letter-spacing: .4px;
+    padding: 3px 9px; border-radius: 999px;
+  }
+  .name { font-size: 15px; font-weight: 700; letter-spacing: -0.2px; }
+  .name-cn { color: var(--ink-3); font-size: 12px; font-weight: 500; margin-top: -4px; }
+  .feats { list-style: none; display: flex; flex-direction: column; gap: 4px; }
+  .feats li { font-size: 12.5px; color: var(--ink-2); padding-left: 12px; position: relative; line-height: 1.45; }
+  .feats li::before { content: "·"; position: absolute; left: 2px; color: var(--red); font-weight: 700; }
+  .sales {
+    font-size: 12.5px; font-weight: 700;
+    border-top: 1px dashed var(--line); padding-top: 7px;
+  }
+  .sales .hedge { font-weight: 400; color: var(--ink-3); font-size: 11px; }
+  .src { margin-top: auto; font-size: 11.5px; color: var(--ink-3); }
+  .src a { color: var(--red); text-decoration: none; }
+  .src a:hover { text-decoration: underline; }
+
+  footer { margin-top: 60px; color: var(--ink-3); font-size: 12px; text-align: center; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="site">
+    <h1><span class="red">ZURU LAB</span> TREND WATCH</h1>
+    <div class="meta" id="siteMeta"></div>
+    <div class="filters" id="filters"></div>
+  </header>
+  <main id="app"></main>
+  <footer>Internal use · Compiled from public listings &amp; social content · All sales figures are listing claims unless noted</footer>
+</div>
+
+<script>
+/* ============================================================
+   DATA MODEL
+   - CATEGORIES: top-level sections, render order = array order
+   - TRENDS:     named trend groups; a product references trend id.
+                 Trends render inside their category, in array order.
+   - PRODUCTS:   one card each. media = single object or array
+                 (array → carousel). type: "image" | "video",
+                 optional poster for video slides.
+   ============================================================ */
+
+const CATEGORIES = [
+  { id: "supplement", name: "Supplement", emoji: "💊" },
+  { id: "oral-care", name: "Oral Care", emoji: "🦷" },
+  { id: "coffee-tea", name: "Coffee & Tea", emoji: "☕" },
+  { id: "home-textile", name: "Home Textile", emoji: "🛏️" },
+  { id: "kids-shoe", name: "Kids Shoe", emoji: "👟" },
+  { id: "snacking", name: "Snacking", emoji: "🍿" },
+];
+
+const TRENDS = [
+  {
+    id: "healthy-functional-snack",
+    category: "supplement",
+    name: "Healthy / Functional Snack",
+    summary: "Snacks repositioned as nutrition delivery — fortification (calcium, iron, zinc, protein) plus play/interactive formats that make 'functional' feel fun, especially for kids.",
+  },
+  {
+    id: "wearable-supplement",
+    category: "supplement",
+    name: "Wearable Supplement",
+    summary: "Supplements as wearable patches — better absorption format meets fun, lifestyle-forward design. Not yet a category in China, but gaining traction in US/UK/EU. Barrière is the standout: turns patches into tattoo-like accessories.",
+  },
+  {
+    id: "high-protein-snacks",
+    category: "snacking",
+    name: "High Protein Snacks",
+    summary: "Everyday snack formats (popcorn, chips, bars) repositioned around protein content — snack first, supplement second.",
+  },
+  {
+    id: "disruptive-format",
+    category: "oral-care",
+    name: "Disruptive Format",
+    summary: "Oral care escaping the toothpaste/mouthwash aisle — benefits (breath, probiotics, whitening) delivered through novel formats (candy, strips, bubbles) that make the routine itself fun and portable.",
+  },
+  {
+    id: "oral-beautification",
+    category: "oral-care",
+    name: "Beautification",
+    summary: "Skincare logic applied to the whole brushing regimen — hero actives with % printed on the front (The Ordinary style), serum-style packaging and texture. One consistent actives-and-% system across toothpaste, sprays and mouthwash.",
+  },
+  {
+    id: "disruptive-format-coffee-tea",
+    category: "coffee-tea",
+    name: "Disruptive Format",
+    summary: "Coffee & tea escaping the hot-brew routine — nitro coffee concentrate and freeze-dried tea / fruit-tea blocks (also catching on in supplements like açaí powder) that make quality drinks instant, portable and fun.",
+  },
+  {
+    id: "playful-packaging",
+    category: "coffee-tea",
+    name: "Playful Packaging",
+    summary: "Freeze-dried coffee turned into a toy — gashapon machines, keyboards, collectible cubes — packaging itself becomes the reason to buy, gift and post.",
+  },
+  {
+    id: "beautification",
+    category: "home-textile",
+    name: "Beautification",
+    summary: "Bedding that doesn't just touch your skin — it cares for it overnight. Probiotics, hyaluronic acid and collagen woven into fabric: your bed becomes the last step of your skincare routine.",
+  },
+  {
+    id: "deep-sleep-concept",
+    category: "home-textile",
+    name: "Deep Sleep Concept",
+    summary: "A whole brand built around one idea — deep sleep. Every product, detail, package and ad starts from it, turning bedding from a category buy into a system you trust and re-buy.",
+  },
+  {
+    id: "charm",
+    category: "kids-shoe",
+    name: "Charm",
+    summary: "One tiny accessory becomes a whole brand — rotary-dial laces with swappable, collectible buckle charms. Practical convenience drives the purchase; charm styles and IP collabs drive repeat purchase (PopSockets model for shoes).",
+  },
+  {
+    id: "disruptive-format-snacking",
+    category: "snacking",
+    name: "Disruptive Format",
+    summary: "Everyday formats re-engineered into something new — freeze-dried topping blocks, cold-water noodles — innovation you can see, feel and taste.",
+  },
+  {
+    id: "new-concept",
+    category: "snacking",
+    name: "New Concept",
+    summary: "Instant foods that skip the heat — no hot water or microwave needed. Novel cold-prep tech and summer-friendly positioning turn convenience into the innovation story.",
+  },
+];
+
+const PRODUCTS = [
+  {
+    id: "babypantry-dino-cookies",
+    category: "supplement",
+    trend: "healthy-functional-snack",
+    brand: "BABYPANTRY 光合星球",
+    name: "Puzzle Cookies with Calcium, Iron & Zinc",
+    features: [
+      "Cookie pieces slot together into <strong>5 different 3D dinosaurs</strong> — kids build before they eat",
+      "Fortified with <strong>calcium, iron &amp; zinc</strong> — play value on top of a nutrition claim",
+    ],
+    sales: "300k+ sold <span class=\"hedge\">(listing claim)</span>",
+    media: [
+      { type: "image", src: "https://fastly.jsdelivr.net/gh/dorisss0213/beauty-innovation-media@main/product-trend-watch/media-webp/babypantry-dino-cookies-dinosaurs.webp", alt: "5 dinosaur builds" },
+      { type: "video", src: "https://fastly.jsdelivr.net/gh/dorisss0213/beauty-innovation-media@main/product-trend-watch/media/babypantry-dino-cookies.mp4", poster: "https://fastly.jsdelivr.net/gh/dorisss0213/beauty-innovation-media@main/product-trend-watch/media-webp/babypantry-dino-cookies-dinosaurs.webp" },
+      { type: "image", src: "https://fastly.jsdelivr.net/gh/dorisss0213/beauty-innovation-media@main/product-trend-watch/media-webp/babypantry-dino-cookies-listing.webp", alt: "Tmall listing" },
+    ],
+  },
+  {
+    id: "babypantry-mini-cookies",
+    category: "supplement",
+    trend: "healthy-functional-snack",
+    brand: "BABYPANTRY 光合星球",
+    name: "Daily Nutrition Mini Cookies",
+    features: [
+      "Colorful soft cookies, each piece stamped with its nutrient (Ca / DHA / GOS / Lut) — <strong>one pack a day</strong> positioning",
+      "Calcium, iron, zinc + vitamins, algae-oil DHA, dual prebiotics, lutein — <strong>dosage logic borrowed from supplements, not snacks</strong>",
+    ],
+    sales: "50k+ sold <span class=\"hedge\">(listing claim)</span>",
+    media: [
+      { type: "image", src: "https://fastly.jsdelivr.net/gh/dorisss0213/beauty-innovation-media@main/product-trend-watch/media-webp/babypantry-mini-cookies-nutrients.webp", alt: "Nutrient breakdown" },
+      { type: "image", src: "https://fastly.jsdelivr.net/gh/dorisss0213/beauty-innovation-media@main/product-trend-watch/media-webp/babypantry-mini-cookies-listing.webp", alt: "Tmall listing" },
+    ],
+  },
+  {
+    id: "babypantry-calcium-fe-zn-soft-cookies",
+    category: "supplement",
+    trend: "healthy-functional-snack",
+    brand: "BABYPANTRY 光合星球",
+    name: "Calcium, Iron & Zinc Soft Cookies",
+    features: [
+      "Soft cookies in <strong>cute colourful shapes</strong> — stars, hearts, fruit silhouettes",
+      "Fortified with <strong>calcium, iron &amp; zinc</strong>; entry-price traffic product with heavy promo",
+    ],
+    sales: "100k+ sold <span class=\"hedge\">(listing claim)</span>",
+    media: [
+      { type: "image", src: "https://fastly.jsdelivr.net/gh/dorisss0213/beauty-innovation-media@main/product-trend-watch/media-webp/babypantry-calcium-fe-zn-soft-cookies-listing.webp", alt: "Tmall listing" },
+    ],
+  },
+  {
+    id: "mushroom-fruit-melts",
+    category: "supplement",
+    trend: "healthy-functional-snack",
+    brand: "BRAND TBC",
+    name: "Mushroom Fruit Melts",
+    features: [
+      "<strong>Mushroom-shaped</strong> melts in fruit colours &amp; flavours — strawberry, peach, dragon fruit, blueberry",
+      "Made with <strong>real fruit purée</strong>, colour visibly matched to the source fruit",
+      "<strong>~2.2× the calcium of milk</strong>, added probiotics, no added sugar / colourant / preservative",
+    ],
+    media: [
+      { type: "image", src: "https://fastly.jsdelivr.net/gh/dorisss0213/beauty-innovation-media@main/product-trend-watch/media-webp/mushroom-fruit-melts-flavors.webp", alt: "Flavours & shapes" },
+      { type: "image", src: "https://fastly.jsdelivr.net/gh/dorisss0213/beauty-innovation-media@main/product-trend-watch/media-webp/mushroom-fruit-melts-claims.webp", alt: "Nutrition claims" },
+    ],
+  },
+  {
+    id: "hawthorn-mini-cones",
+    category: "supplement",
+    trend: "healthy-functional-snack",
+    brand: "BABYPANTRY 光合星球",
+    name: "Hawthorn Mini Cones",
+    features: [
+      "Tiny <strong>ice-cream-cone shapes</strong> — a familiar treat format turned kids' functional snack",
+      "<strong>5-ingredient digestion formula</strong>: hawthorn, chicken gizzard lining, yam, prebiotics &amp; fibre",
+    ],
+    sales: "50k+ sold <span class=\"hedge\">(listing claim)</span>",
+    media: [
+      { type: "image", src: "https://fastly.jsdelivr.net/gh/dorisss0213/beauty-innovation-media@main/product-trend-watch/media-webp/babypantry-hawthorn-mini-cones-listing.webp", alt: "Tmall listing" },
+    ],
+  },
+  {
+    id: "babypantry-flavored-drink-straws",
+    category: "supplement",
+    trend: "healthy-functional-snack",
+    brand: "BABYPANTRY 光合星球",
+    name: "Flavored Drink Straws",
+    features: [
+      "Straws that <strong>flavour milk or water as you sip</strong> — the fun of drinking built into the utensil",
+      "Options map to benefit, not flavour: hawthorn for digestion, pineapple for eye health",
+    ],
+    sales: "10k+ sold <span class=\"hedge\">(listing claim)</span>",
+    media: [
+      { type: "image", src: "https://fastly.jsdelivr.net/gh/dorisss0213/beauty-innovation-media@main/product-trend-watch/media-webp/babypantry-flavored-drink-straws-listing.webp", alt: "Tmall listing" },
+      { type: "video", src: "https://fastly.jsdelivr.net/gh/dorisss0213/beauty-innovation-media@main/product-trend-watch/media/babypantry-flavored-drink-straws.mp4", poster: "https://fastly.jsdelivr.net/gh/dorisss0213/beauty-innovation-media@main/product-trend-watch/media-webp/babypantry-flavored-drink-straws-listing.webp" },
+    ],
+  },
+  {
+    id: "babypantry-marshmallow-pops",
+    category: "supplement",
+    trend: "healthy-functional-snack",
+    brand: "BABYPANTRY 光合星球",
+    name: "Filled Marshmallow Pops",
+    features: [
+      "Marshmallow pops with a <strong>gooey centre</strong> — indulgent texture hook in a kids' snack",
+      "Marketed as <strong>zero added sugar</strong> + <strong>high calcium</strong> — the guilt-free treat claim stack",
+    ],
+    sales: "20k+ sold <span class=\"hedge\">(listing claim)</span>",
+    media: [
+      { type: "image", src: "https://fastly.jsdelivr.net/gh/dorisss0213/beauty-innovation-media@main/product-trend-watch/media-webp/babypantry-marshmallow-pops-listing.webp", alt: "Tmall listing" },
+      { type: "image", src: "https://fastly.jsdelivr.net/gh/dorisss0213/beauty-innovation-media@main/product-trend-watch/media-webp/babypantry-marshmallow-pops-video.webp", alt: "Video thumbnail" },
+    ],
+  },
+  {
+    id: "barriere-functional-patches",
+    category: "supplement",
+    trend: "wearable-supplement",
+    brand: "Barrière",
+    name: "Functional Supplement Patches",
+    features: [
+      "<strong>Tattoo-like supplement patches</strong> — stars, hearts, minimal shapes that double as visible skin accessories",
+      "Line-up named by benefit: <strong>NAD+ Youth Repair</strong>, <strong>Dear Dairy</strong> (lactose relief), <strong>Pep Rally</strong> (peptide), <strong>Focus</strong>",
+      "<strong>$12.99 / 36ct</strong> (~$0.36/patch) vs. Olly gummies ~$0.14 and Nature Made tablets ~$0.10 — design &amp; format, not ingredients, drive the premium",
+    ],
+    media: [
+      { type: "image", src: "https://fastly.jsdelivr.net/gh/dorisss0213/beauty-innovation-media@main/product-trend-watch/media-webp/barriere-patches-product-line.webp", alt: "Product line-up" },
+      { type: "image", src: "https://fastly.jsdelivr.net/gh/dorisss0213/beauty-innovation-media@main/product-trend-watch/media-webp/barriere-focus-patch-lifestyle.webp", alt: "Focus patch on skin" },
+    ],
+  },
+  {
+    id: "khloud-protein-popcorn",
+    category: "snacking",
+    trend: "high-protein-snacks",
+    brand: "Khloud",
+    name: "Protein Popcorn",
+    features: [
+      "<strong>7g protein per serving</strong> — popcorn repositioned as a protein delivery vehicle",
+      "Founded by <strong>Khloé Kardashian</strong> (2025); called out by Target's CCO as a wellness growth driver",
+      "Protein-only today — could extend with immunity / energy / skin ingredients, but <strong>easy for Khloud to copy</strong>",
+    ],
+    media: [
+      { type: "image", src: "https://fastly.jsdelivr.net/gh/dorisss0213/beauty-innovation-media@main/product-trend-watch/media-webp/khloud-protein-popcorn.webp", alt: "Three flavour bags" },
+    ],
+  },
+  {
+    id: "functional-chocolate-aficion",
+    category: "supplement",
+    trend: "healthy-functional-snack",
+    brand: "AFICIÓN (歌斐颂)",
+    name: "Functional Chocolate",
+    features: [
+      "<strong>China is still basic</strong> — functional chocolate means added fibre or probiotics; AFICIÓN's fibre dark chocolate leads with a \"133% fibre\" claim",
+      "<strong>Japan is way ahead</strong> — chocolates for sleep, immunity, memory; e.g. Morinaga's <strong>Immune CARE</strong> with plasma milk protein",
+      "<strong>US gap:</strong> mass players (MyBite, Good Day, EVOLUTION_18) are dated / sugary / narrow, while better-branded newcomers (Alice Mushrooms, Fx Chocolate) lack retail — in a <strong>~$24B market</strong> (Statista)",
+    ],
+    media: [
+      { type: "image", src: "https://fastly.jsdelivr.net/gh/dorisss0213/beauty-innovation-media@main/product-trend-watch/media-webp/aficion-fiber-dark-chocolate.webp", alt: "AFICIÓN dietary fiber dark chocolate (China)" },
+      { type: "image", src: "https://fastly.jsdelivr.net/gh/dorisss0213/beauty-innovation-media@main/product-trend-watch/media-webp/morinaga-immune-care-chocolate.webp", alt: "Morinaga Immune CARE chocolate (Japan)" },
+    ],
+  },
+  {
+    id: "chibog-konjac-crisp-biscuit",
+    category: "snacking",
+    trend: "high-protein-snacks",
+    brand: "CHIBOG! (饮食伙计)",
+    name: "Konjac Crisp Biscuit",
+    features: [
+      "<strong>Extreme per-piece math</strong> — each 5g biscuit: <strong>2.4g protein</strong> (nearly half), 0g fat, only <strong>11 kcal</strong>",
+      "Konjac (glucomannan) base — zero-fat, low-carb / keto-friendly, also marketed as meal replacement",
+      "Contrast with Khloud: <strong>volume &amp; satiety at near-zero calories</strong> first, protein second",
+    ],
+    sales: "10k+ sold (listing claim)",
+    media: [
+      { type: "image", src: "https://fastly.jsdelivr.net/gh/dorisss0213/beauty-innovation-media@main/product-trend-watch/media-webp/chibog-konjac-crisp-biscuit-nutrition.webp", alt: "Per-piece nutrition" },
+      { type: "image", src: "https://fastly.jsdelivr.net/gh/dorisss0213/beauty-innovation-media@main/product-trend-watch/media-webp/chibog-konjac-crisp-biscuit-listing.webp", alt: "Tmall listing" },
+    ],
+  },
+  {
+    id: "tci-jellie-supplement",
+    category: "supplement",
+    trend: "healthy-functional-snack",
+    brand: "TCI (大江生医)",
+    name: "Jellie — Jelly Supplement",
+    features: [
+      "<strong>Jelly as the supplement format</strong> — actives in a squeeze-out jelly stick: packaging, flavour and texture all differentiated at once",
+      "Line-up named by benefit: <strong>Sleepy Jellie</strong> (GABA + L-theanine), <strong>Protein Jellie</strong>, <strong>Collagen Jellie</strong> — one colour per function",
+      "Clear window shows the wobble — <strong>texture is the shelf appeal</strong>; TCI is an ODM, a ready-made format platform to white-label",
+    ],
+    source: { label: "Cosmoprof 2026 / TCI Co.", url: null },
+    media: [
+      { type: "image", src: "https://fastly.jsdelivr.net/gh/dorisss0213/beauty-innovation-media@main/product-trend-watch/media-webp/tci-jellie-lineup.webp", alt: "Jellie line-up on TCI booth screen" },
+      { type: "video", src: "https://fastly.jsdelivr.net/gh/dorisss0213/beauty-innovation-media@main/product-trend-watch/media/tci-jellie.mp4", poster: "https://fastly.jsdelivr.net/gh/dorisss0213/beauty-innovation-media@main/product-trend-watch/media-webp/tci-jellie-lineup.webp" },
+    ],
+  },
+  {
+    id: "swisse-me-bubbling-candy",
+    category: "oral-care",
+    trend: "disruptive-format",
+    brand: "Swisse Me",
+    name: "Probiotic Bubbling Candy",
+    features: [
+      "<strong>Eat like a mint, works like mouthwash</strong> — fizzes and bubbles as it dissolves; no water needed",
+      "<strong>~10.5bn CFU oral probiotics</strong> per tablet — fresh breath plus a healthier mouth, beyond masking odour",
+      "<strong>The fizz is the appeal</strong> — social videos highlight how fun the bubbling feels",
+    ],
+    sales: "60k+ sold <span class=\"hedge\">(Taobao listing)</span>",
+    media: [
+      { type: "image", src: "https://fastly.jsdelivr.net/gh/dorisss0213/beauty-innovation-media@main/product-trend-watch/media-webp/swisse-me-bubbling-candy-hero.webp", alt: "口香炮弹 Bubble Effervescent hero" },
+      { type: "image", src: "https://fastly.jsdelivr.net/gh/dorisss0213/beauty-innovation-media@main/product-trend-watch/media-webp/swisse-me-bubbling-candy-listing.webp", alt: "Tmall listing" },
+      { type: "image", src: "https://fastly.jsdelivr.net/gh/dorisss0213/beauty-innovation-media@main/product-trend-watch/media-webp/swisse-me-bubbling-candy-detail.webp", alt: "Flavour options & price" },
+    ],
+  },
+  {
+    id: "canban-solid-mouthwash",
+    category: "oral-care",
+    trend: "disruptive-format",
+    brand: "CANBAN",
+    name: "Solid Mouthwash — Chewable Tablet",
+    features: [
+      "<strong>All-in-one chewable</strong> — toothpaste + mouthwash + breath spray in a single tablet; chew and it instantly foams",
+      "<strong>Foam changes colour to show it's working</strong> — a built-in visual effect made for viral content",
+      "Claims <strong>24-hour fresh breath</strong> and whitening, plus added probiotics",
+    ],
+    sales: "112K likes on top Douyin video",
+    media: [
+      { type: "video", src: "https://fastly.jsdelivr.net/gh/dorisss0213/beauty-innovation-media@main/product-trend-watch/media/canban-solid-mouthwash.mp4", poster: "https://fastly.jsdelivr.net/gh/dorisss0213/beauty-innovation-media@main/product-trend-watch/media-webp/canban-solid-mouthwash-poster.webp" },
+    ],
+  },
+  {
+    id: "perfume-style-mouth-sprays",
+    category: "oral-care",
+    trend: "oral-beautification",
+    brand: "Canban 参半 · ecooobix 白惜",
+    name: "Perfume-Style Mouth Sprays",
+    features: [
+      "<strong>Mouth sprays designed like accessories</strong> — sculpted caps &amp; pastel bottles (ecooobix), or a card-size pocket spray that clips onto your bag like a charm (Canban)",
+      "<strong>Flavours built like actual fragrance</strong> — top / middle / base notes: Canban's pomegranate spray opens green &amp; pomegranate, finishes on mint (Swiss perfumery); ecooobix spans Blueberry &amp; Iris to Jasmine &amp; Oolong",
+      "<strong>Hygiene becomes self-expression</strong> — the product is photogenic social currency; a clear opening to disrupt the still-clinical US mouth spray market with ZURU's packaging approach",
+    ],
+    media: [
+      { type: "image", src: "https://fastly.jsdelivr.net/gh/dorisss0213/beauty-innovation-media@main/product-trend-watch/media-webp/ecooobix-oral-perfume-lineup.webp", alt: "ecooobix 口腔香水 line-up" },
+      { type: "image", src: "https://fastly.jsdelivr.net/gh/dorisss0213/beauty-innovation-media@main/product-trend-watch/media-webp/canban-pocket-card-spray.webp", alt: "Canban card-size pocket spray as bag charm" },
+      { type: "image", src: "https://fastly.jsdelivr.net/gh/dorisss0213/beauty-innovation-media@main/product-trend-watch/media-webp/canban-pomegranate-spray-notes.webp", alt: "Canban pomegranate spray — fragrance notes" },
+    ],
+  },
+  {
+    id: "cocolab-flavored-floss",
+    category: "oral-care",
+    trend: "oral-beautification",
+    brand: "COCOLAB",
+    name: "EOS PLAY in Dental Floss",
+    features: [
+      "<strong>Floss in a ton of flavours</strong> — Confetti Cake, Vanilla Bean, Young Coconut, Lychee Breeze and more, way beyond the usual mint, plus limited editions and holiday gift sets",
+      "<strong>Colours &amp; packaging make flossing something to look forward to</strong> — turning a boring daily step into a small moment of joy; #1 dentist-recommended woven floss (Allure Best of Beauty 2025)",
+      "<strong>Sold at a premium</strong> — $9.99 per regular case, well above other floss brands; opportunity to borrow the idea and make our own budget-friendly version",
+    ],
+    media: [
+      { type: "image", src: "https://fastly.jsdelivr.net/gh/dorisss0213/beauty-innovation-media@main/product-trend-watch/media-webp/cocolab-flavored-floss-lineup.webp", alt: "COCOLAB flavour line-up & holiday gift set" },
+      { type: "image", src: "https://fastly.jsdelivr.net/gh/dorisss0213/beauty-innovation-media@main/product-trend-watch/media-webp/cocolab-confetti-cake-flavors.webp", alt: "Confetti Cake floss — full flavour range" },
+    ],
+  },
+  {
+    id: "noji-bi-phase-oral-essence",
+    category: "oral-care",
+    trend: "oral-beautification",
+    brand: "NOJI",
+    name: "Bi-Phase Oral Essence",
+    features: [
+      "<strong>Skincare-look bi-phase formula</strong> — water + essential-oil layers in a flask-style dropper bottle; marketed as gentler than traditional mouthwash, framed on Ayurvedic oil-pulling (oil-water bonding, essence oil beads, turbidity control)",
+      "<strong>One essence, four ways to use</strong> — straight, diluted with water, alongside toothpaste, or dropped into aligners / retainers",
+    ],
+    media: [
+      { type: "image", src: "https://fastly.jsdelivr.net/gh/dorisss0213/beauty-innovation-media@main/product-trend-watch/media-webp/noji-bi-phase-oral-essence-hero.webp", alt: "NOJI bi-phase oral essence hero" },
+      { type: "image", src: "https://fastly.jsdelivr.net/gh/dorisss0213/beauty-innovation-media@main/product-trend-watch/media-webp/noji-bi-phase-oral-essence-mechanism.webp", alt: "Oil-water mechanism & usage" },
+    ],
+  },
+  {
+    id: "nobaton-ampoule-oralcare",
+    category: "oral-care",
+    trend: "oral-beautification",
+    brand: "Nobaton",
+    name: "Ampoule Oral Care Line",
+    features: [
+      "<strong>Actives with % on the front, very The Ordinary</strong> — the toothpaste line borrows skincare actives for teeth: 1% AHA (fruit acid) for stains, 2% frankincense for bad breath, 5% HAP for sensitivity, 6% royal jelly for gums — concentration printed right on the front",
+      "<strong>The ampoule format itself</strong> — toothpaste comes in 35g serum-style bottles; even the texture breaks category norms: a runny lotion that melts on contact and foams up dense, instead of a thick paste — it really looks like skincare",
+      "<strong>One % language across every product line</strong> — mouth sprays (1% fine salt &amp; tea tree, 1.2% propolis mint) and mouthwash all lead with the same actives-and-% system; opportunity to use the same skincare thinking to build our own line across the whole brushing regimen",
+    ],
+    sales: "200k+ units sold on Douyin <span class=\"hedge\">(hero 1% AHA toothpaste)</span>",
+    media: [
+      { type: "image", src: "https://fastly.jsdelivr.net/gh/dorisss0213/beauty-innovation-media@main/product-trend-watch/media-webp/nobaton-ampoule-toothpaste-lineup.webp", alt: "5 ampoule toothpaste SKUs with % actives on front" },
+      { type: "image", src: "https://fastly.jsdelivr.net/gh/dorisss0213/beauty-innovation-media@main/product-trend-watch/media-webp/nobaton-mouth-sprays.webp", alt: "Mouth sprays — 1% fine salt & tea tree, 1.2% propolis mint" },
+      { type: "image", src: "https://fastly.jsdelivr.net/gh/dorisss0213/beauty-innovation-media@main/product-trend-watch/media-webp/nobaton-mouthwash-lineup.webp", alt: "Mouthwash line — same actives-and-% system" },
+    ],
+  },
+  {
+    id: "bop-fragrance-toothpastes",
+    category: "oral-care",
+    trend: "oral-beautification",
+    brand: "BOP 波普专研",
+    name: "Fragrance Toothpastes",
+    features: [
+      "<strong>Real perfume structure, not just 'extra minty'</strong> — every flavour is built like an actual perfume with top / middle / base notes; Dewy Peach opens with jasmine, settles into white peach &amp; apple, finishes on mint &amp; vanilla — a scent journey, not a flavour",
+      "<strong>The names do the marketing</strong> — Dewy Peach (雨后初桃), Orange Glow (橘彩霞光), Frozen Grape (冻顶葡萄): you get the whole mood before you even taste it; colour-coded tubes + glittery paste pop on shelf and on camera",
+      "<strong>Each SKU is a scene, not just a flavour</strong> — one targets hotpot &amp; BBQ breath, one's for coffee drinkers, another for smoke &amp; tea stains; real claims (24h fresh breath, 7-day whitening) backed by botanical extracts (rose oil, sweet orange, grape seed)",
+    ],
+    sales: "9.6M+ tubes sold in China <span class=\"hedge\">(BOP internal data, May 2025 – Aug 2026)</span>",
+    media: [
+      { type: "image", src: "https://fastly.jsdelivr.net/gh/dorisss0213/beauty-innovation-media@main/product-trend-watch/media-webp/bop-dewy-peach.webp", alt: "Dewy Peach 雨后初桃 — jasmine opening, rose oil" },
+      { type: "image", src: "https://fastly.jsdelivr.net/gh/dorisss0213/beauty-innovation-media@main/product-trend-watch/media-webp/bop-orange-glow.webp", alt: "Orange Glow 橘彩霞光 — sweet orange extract, hotpot & BBQ scene" },
+      { type: "image", src: "https://fastly.jsdelivr.net/gh/dorisss0213/beauty-innovation-media@main/product-trend-watch/media-webp/bop-juicy-grape.webp", alt: "Frozen Grape 冻顶葡萄 — grape seed extract, smoke & tea stains" },
+    ],
+  },
+  {
+    id: "canban-essential-oils-toothpaste",
+    category: "oral-care",
+    trend: "oral-beautification",
+    brand: "Canban 参半",
+    name: "Essential Oils Toothpaste",
+    features: [
+      "<strong>Tiny oil-filled beads burst as you brush</strong> — micro-capsule beads release essential plant oils at the moment of brushing, adding a fun sensory element while helping reduce plaque and lift stubborn tooth stains",
+      "<strong>Clinically proven claims</strong> — 3× plaque inhibition in 1 week, dissolves 10 years of stains, 4 shades whiter in a week (+338% yellow reduction), plus 24h fresh breath with a green apple / amber scent",
+      "<strong>Microfluidic capsule lock-tech</strong> — each bead is precision-dosed and keeps the oils fresh &amp; active until it bursts and penetrates between teeth as you brush",
+    ],
+    media: [
+      { type: "video", src: "https://fastly.jsdelivr.net/gh/dorisss0213/beauty-innovation-media@main/product-trend-watch/media/canban-essential-oils.mp4", poster: "https://fastly.jsdelivr.net/gh/dorisss0213/beauty-innovation-media@main/product-trend-watch/media-webp/canban-essential-oils-poster.webp" },
+      { type: "image", src: "https://fastly.jsdelivr.net/gh/dorisss0213/beauty-innovation-media@main/product-trend-watch/media-webp/canban-essential-oils-hero.webp", alt: "参半 ESSENTIAL OILS toothpaste — 4-core oil beads, 100g" },
+      { type: "image", src: "https://fastly.jsdelivr.net/gh/dorisss0213/beauty-innovation-media@main/product-trend-watch/media-webp/canban-essential-oils-beads.webp", alt: "Microfluidic capsule tech — precision dosing, stability, burst release" },
+    ],
+  },
+  {
+    id: "joyinbag-nitro-coffee",
+    category: "coffee-tea",
+    trend: "disruptive-format-coffee-tea",
+    brand: "JOYINBAG (兜饮咖啡)",
+    name: "Nitro Coffee Concentrate",
+    features: [
+      "<strong>More pure</strong> — nitrogen infusion blocks 99.8% of oxygen, preserving the coffee's original aroma and flavour without additives",
+      "<strong>Better taste + truly portable</strong> — fine nitrogen bubbles create a delicate \u201csweet foam\u201d for a richer, smoother pour; pocket-size format works at the office, on travel, outdoors or at home",
+      "<strong>Branding opportunity</strong> — eye-catching packaging with lots of flavour / colour variations, and the cascading nitro pour is highly TikTokable",
+    ],
+    media: [
+      { type: "video", src: "https://fastly.jsdelivr.net/gh/dorisss0213/beauty-innovation-media@main/product-trend-watch/media/joyinbag-nitro-coffee.mp4", poster: "https://fastly.jsdelivr.net/gh/dorisss0213/beauty-innovation-media@main/product-trend-watch/media-webp/joyinbag-nitro-coffee-poster.webp" },
+    ],
+  },
+  {
+    id: "shuita-tundun-freeze-dried-tea",
+    category: "coffee-tea",
+    trend: "disruptive-format-coffee-tea",
+    brand: "水獭吨吨 (Shuita Tundun)",
+    name: "Freeze-Dried Tea Blocks",
+    features: [
+      "<strong>Freeze-drying catches on in tea &amp; drinks</strong> — unsweetened freeze-dried tea blocks (Longjing, Oolong, Jasmine) dissolve in cold or hot water in seconds, real-brew taste with zero brewing",
+      "<strong>Fruit-tea blocks too</strong> — tea plus real fruit freeze-dried into one block, a fruit tea in one pour; part of the same freeze-dried wave as SO ACAI's Brazilian açaí powder in supplements",
+      "<strong>Gifting &amp; collectible angle</strong> — colourful lineup boxes with gift add-ons (glass cup, tumbler) and top-seller status during Double 11 subsidies",
+    ],
+    sales: "6,000+ sold (single Tmall link) <span class=\"hedge\">(Double 11, subsidy price ¥29.8+)</span>",
+    media: [
+      { type: "video", src: "https://fastly.jsdelivr.net/gh/dorisss0213/beauty-innovation-media@main/product-trend-watch/media/shuita-tundun-freeze-dried-tea.mp4", poster: "https://fastly.jsdelivr.net/gh/dorisss0213/beauty-innovation-media@main/product-trend-watch/media-webp/shuita-tundun-freeze-dried-tea-poster.webp" },
+      { type: "image", src: "https://fastly.jsdelivr.net/gh/dorisss0213/beauty-innovation-media@main/product-trend-watch/media-webp/shuita-tundun-freeze-dried-tea.webp", alt: "Tmall listing — Longjing / Oolong / Jasmine tea blocks" },
+    ],
+  },
+  {
+    id: "regenerate-foaming-mouthwash",
+    category: "oral-care",
+    trend: "disruptive-format",
+    brand: "REGENERATE",
+    name: "Foaming Mouthwash",
+    features: [
+      "<strong>Pump foam, no rinsing cup needed</strong> — easy to control the dose and spit the foam straight into a napkin; ultra-portable for on-the-go use",
+      "<strong>Mild formula</strong> — 0% alcohol, non-stinging; rich mousse foam fills the mouth for a deeper clean, freshens breath and helps protect enamel",
+      "<strong>Small bottle, big mileage</strong> — one compact bottle delivers as many uses as a 500ml liquid mouthwash",
+    ],
+    media: [
+      { type: "video", src: "https://fastly.jsdelivr.net/gh/dorisss0213/beauty-innovation-media@main/product-trend-watch/media/regenerate-foaming-mouthwash.mp4", poster: "https://fastly.jsdelivr.net/gh/dorisss0213/beauty-innovation-media@main/product-trend-watch/media-webp/regenerate-foaming-mouthwash-hero.webp" },
+      { type: "image", src: "https://fastly.jsdelivr.net/gh/dorisss0213/beauty-innovation-media@main/product-trend-watch/media-webp/regenerate-foaming-mouthwash-hero.webp", alt: "Foaming Mouthwash hero — rich mousse foam" },
+      { type: "image", src: "https://fastly.jsdelivr.net/gh/dorisss0213/beauty-innovation-media@main/product-trend-watch/media-webp/regenerate-foaming-mouthwash-lifestyle.webp", alt: "Lifestyle — on the go" },
+    ],
+  },
+  {
+    id: "yongpu-5d-freeze-dried-coffee",
+    category: "coffee-tea",
+    trend: "disruptive-format-coffee-tea",
+    brand: "永璞 Yongpu",
+    name: "5D Aroma-Lock Freeze-Dried Coffee Blocks",
+    features: [
+      "<strong>5D aroma-lock freeze-dry tech</strong> — skips the grinding step with \"fill first, freeze-dry after\": whole coffee blocks (not powder) that lock temperature, flavour, aroma, form &amp; freshness, built on the SCA gold-cup extraction standard",
+      "<strong>Single-origin beans, hot &amp; cold instant</strong> — Ethiopia / Kenya / Yunnan SOE plus a global espresso blend; dissolves in seconds hot or cold, and the original little-cup format keeps freshness for 24 months",
+      "<strong>From convenience to quality</strong> — launched July 2025, moving freeze-dried coffee beyond 'portable' to 'tastes like freshly extracted': the industry's 3.0 era, and a playbook for premium instant coffee",
+    ],
+    sales: "20k+ reviews on JD, 5k+ monthly <span class=\"hedge\">(Tmall superstore)</span>",
+    media: [
+      { type: "video", src: "https://fastly.jsdelivr.net/gh/dorisss0213/beauty-innovation-media@main/product-trend-watch/media/yongpu-5d-freeze-dried-coffee.mp4", poster: "https://fastly.jsdelivr.net/gh/dorisss0213/beauty-innovation-media@main/product-trend-watch/media-webp/yongpu-5d-freeze-dried-coffee-poster.webp" },
+    ],
+  },
+  {
+    id: "freeze-dried-coffee-playful-packaging",
+    category: "coffee-tea",
+    trend: "playful-packaging",
+    brand: "F5 COFFEE · Saynice",
+    name: "Freeze-Dried Coffee, Toy Edition",
+    features: [
+      "<strong>Freeze-dried coffee sold as a toy</strong> — F5 COFFEE packs flavour cubes into a keyboard-shaped box (each cube a \"keycap\", press one to brew), Saynice ships a working gashapon machine filled with capsule balls",
+      "<strong>Packaging is the purchase reason</strong> — collectible, giftable, photogenic; turns a commodity (instant coffee) into a premium gift item",
+      "<strong>Opportunity for us</strong> — combine freeze-dried coffee with a toy concept: LEGO-style cups that click together into a build once you've finished the coffee",
+    ],
+    sales: "F5 900+ · Saynice 2k+ sold <span class=\"hedge\">(listing claims)</span>",
+    media: [
+      { type: "image", src: "https://fastly.jsdelivr.net/gh/dorisss0213/beauty-innovation-media@main/product-trend-watch/media-webp/saynice-gashapon-machine-box.webp", alt: "Saynice gashapon machine gift box", pos: "50% 12%" },
+      { type: "image", src: "https://fastly.jsdelivr.net/gh/dorisss0213/beauty-innovation-media@main/product-trend-watch/media-webp/f5-coffee-freeze-dried-family-pack.webp", alt: "F5 COFFEE flavour cube family pack", pos: "50% 12%" },
+      { type: "image", src: "https://fastly.jsdelivr.net/gh/dorisss0213/beauty-innovation-media@main/product-trend-watch/media-webp/f5-coffee-keyboard-box.webp", alt: "F5 COFFEE keyboard-shaped box", pos: "50% 12%" },
+    ],
+  },
+  {
+    id: "sidefu-probiotic-bedding",
+    category: "home-textile",
+    trend: "beautification",
+    brand: "SIDEFU (斯得福)",
+    name: "Probiotic Bedding Set",
+    features: [
+      "<strong>300 billion probiotics embedded in the fabric</strong> (Bacillus + Bifidobacterium, lab-verified 1.2×10⁸/g) that release as you move in your sleep",
+      "Claims to suppress odour-causing bacteria and mites and <strong>balance the skin's microbiome</strong> overnight — skincare logic woven into bedsheets",
+    ],
+    media: [
+      { type: "image", src: "https://fastly.jsdelivr.net/gh/dorisss0213/beauty-innovation-media@main/product-trend-watch/media-webp/sidefu-probiotic-bedding.webp", alt: "300 billion probiotics bedding hero" },
+    ],
+  },
+  {
+    id: "limerence-ha-bedding",
+    category: "home-textile",
+    trend: "beautification",
+    brand: "LIMERENCE",
+    name: "Hyaluronic Acid Bedding Set",
+    features: [
+      "<strong>Fabric woven with 187.2mg/kg hyaluronic acid</strong> — positioned as an <strong>\"invisible sleep mask\"</strong> that locks in moisture all night",
+      "Cooling-touch 100-count Tencel™ four-piece set; OEKO-TEX &amp; SGS certified, HA effect claimed to persist after 30 washes (SGS test report)",
+    ],
+    media: [
+      { type: "image", src: "https://fastly.jsdelivr.net/gh/dorisss0213/beauty-innovation-media@main/product-trend-watch/media-webp/limerence-ha-bedding-hero.webp", alt: "HA bedding set hero" },
+      { type: "image", src: "https://fastly.jsdelivr.net/gh/dorisss0213/beauty-innovation-media@main/product-trend-watch/media-webp/limerence-ha-bedding-ha.webp", alt: "187.2mg/kg hyaluronic acid infographic" },
+    ],
+  },
+  {
+    id: "mercury-collagen-silk-quilt",
+    category: "home-textile",
+    trend: "beautification",
+    brand: "Mercury (水星家纺)",
+    name: "Collagen-Infused Silk Quilt",
+    features: [
+      "<strong>Deep-sea collagen fibre (38.2mg/kg)</strong> woven into the fabric with organic silk filling — \"8 hours of continuous skin hydration\"",
+      "<strong>Tested by cosmetics standards</strong> — skincare-style claims from an 8h real-skin wear test: <strong>+29.54% skin hydration</strong>, +23.14% complexion, −25.72% TEWL",
+      "<strong>The fresh angle</strong> — marketing a quilt the way you'd market a face cream: your bed as the last step of your skincare routine",
+    ],
+    media: [
+      { type: "image", src: "https://fastly.jsdelivr.net/gh/dorisss0213/beauty-innovation-media@main/product-trend-watch/media-webp/mercury-collagen-quilt-efficacy.webp", alt: "Skincare-standard efficacy claims" },
+      { type: "image", src: "https://fastly.jsdelivr.net/gh/dorisss0213/beauty-innovation-media@main/product-trend-watch/media-webp/mercury-collagen-quilt-fiber.webp", alt: "Collagen-infused fibre tech" },
+      { type: "image", src: "https://fastly.jsdelivr.net/gh/dorisss0213/beauty-innovation-media@main/product-trend-watch/media-webp/mercury-collagen-quilt-layers.webp", alt: "Layer construction breakdown" },
+    ],
+  },
+  {
+    id: "dada-rotary-laces",
+    category: "kids-shoe",
+    trend: "charm",
+    brand: "DaDa 嗒嗒",
+    name: "Rotary-Dial Shoelaces with Charm Buckles",
+    features: [
+      "<strong>Twist to tighten, no tying</strong> — the rotary dial does the job of laces, and that practical convenience is the main hook; a swappable charm on top is what turns it into something people collect",
+      "<strong>Endless charm styles &amp; IP collabs</strong> — Ultraman, Pikachu, Mario and more — basically a collectible system you wear on your shoes",
+      "<strong>One accessory, one whole brand (PopSockets model)</strong> — DaDa is China's largest rotary-buckle supplier with 6 offline stores in Shenzhen; easy to picture our own — imagine a Fuggler IP series of collectible buckle charms",
+    ],
+    sales: "60M+ units sold in 2024, 100M+ cumulative",
+    media: [
+      { type: "image", src: "https://fastly.jsdelivr.net/gh/dorisss0213/beauty-innovation-media@main/product-trend-watch/media-webp/dada-rotary-laces-charms.webp", alt: "Sneaker with swappable charm buckles — Mario, Pikachu & more" },
+      { type: "image", src: "https://fastly.jsdelivr.net/gh/dorisss0213/beauty-innovation-media@main/product-trend-watch/media-webp/dada-rotary-laces-brand.webp", alt: "DaDa brand profile — 74 patents, #1 in category" },
+    ],
+  },
+  {
+    id: "ramen-talk-freeze-dried-block",
+    category: "snacking",
+    trend: "disruptive-format-snacking",
+    brand: "拉面说 (Ramen Talk)",
+    name: "Freeze-Dried High-Protein Veggie Block",
+    features: [
+      "<strong>Protein made visual</strong> — one big freeze-dried block packed with real toppings (thin-cut beef, scrambled egg, tomato, mushrooms &amp; more, 40g+ per pack): you can see the protein before you even add water",
+      "<strong>Add-in for instant noodles</strong> — drops into the cup and rehydrates like a freshly cooked topping (\u201clike stir-fried at home\u201d), turning a quick noodle into a proper meal",
+      "<strong>Positioned as a high-protein instant noodle</strong> — 'a new height for instant noodles' built around the oversized topping block, a more visual way to highlight protein than a number on the front",
+    ],
+    media: [
+      { type: "image", src: "https://fastly.jsdelivr.net/gh/dorisss0213/beauty-innovation-media@main/product-trend-watch/media-webp/ramen-talk-veggie-block.webp", alt: "Big freeze-dried topping block over the noodle cup" },
+      { type: "image", src: "https://fastly.jsdelivr.net/gh/dorisss0213/beauty-innovation-media@main/product-trend-watch/media-webp/ramen-talk-ingredients.webp", alt: "Ingredient grid — 40g+ toppings per pack" },
+    ],
+  },
+  {
+    id: "nissin-cold-water-cup-noodles",
+    category: "snacking",
+    trend: "new-concept",
+    brand: "Nissin 日清",
+    name: "Cold-Water Cup Noodles",
+    features: [
+      "<strong>Just add cold water, wait 5 minutes</strong> — no hot water or microwave needed; Nissin's patented \u201cCold Rehydrate\u201d tech softens the noodles even in cold water while keeping a firm, smooth texture (heat-shield lid keeps them from going mushy)",
+      "<strong>A cold option for summer</strong> — two flavours: Chicken Salt &amp; Lemon and Spicy Kimchi, positioned as \u201ca summer snack that fills you up\u201d; a first-in-history cold-water cup noodle, sold in 6-cup boxes on Amazon Japan",
+      "<strong>Honest caveat</strong> — still made with fried noodles, roughly the same calories gram for gram as regular Cup Noodles; it's mainly about convenience, not health; got attention in Chinese social-media taste tests after its July/August launch",
+    ],
+    media: [
+      { type: "image", src: "https://fastly.jsdelivr.net/gh/dorisss0213/beauty-innovation-media@main/product-trend-watch/media-webp/nissin-cold-cup-noodles.webp", alt: "Nissin cold-water Cup Noodles — Chicken Salt & Lemon, Spicy Kimchi" },
+    ],
+  },
+  {
+    id: "atour-deep-sleep-pillow-pro",
+    category: "home-textile",
+    trend: "deep-sleep-concept",
+    brand: "Atour Planet (亚朵星球)",
+    name: "Deep Sleep Pillow Pro 4.0",
+    features: [
+      "<strong>Dynamic cushioning that follows your body</strong> — AgileSupport® three-layer structure (hug foam / air-cell foam / anti-pressure foam) plus R-6 internal zones precision-mapped to head, shoulder and neck, adapting as you change sleeping positions — \u201ca good pillow moves with your body\u201d",
+      "<strong>Interactive unboxing reinforces the product story</strong> — the innovative cylindrical pack's top rebounds when pressed, so you feel the pillow's cushioning and resilience before you even open it (\u201cunboxing feels like a deep breath\u201d)",
+      "<strong>One idea everywhere: deep sleep</strong> — every product, packaging detail and ad in the Atour Planet line starts from deep sleep, a whole brand built around a single concept",
+    ],
+    sales: "12M+ units sold since 2023, No.1 on Tmall <span class=\"hedge\">(~RMB 400/pillow, ~RMB 4.8B cumulative)</span>",
+    media: [
+      { type: "image", src: "https://fastly.jsdelivr.net/gh/dorisss0213/beauty-innovation-media@main/product-trend-watch/media-webp/atour-pillow-hero.webp", alt: "\u201cA good pillow follows your body\u201d hero" },
+      { type: "image", src: "https://fastly.jsdelivr.net/gh/dorisss0213/beauty-innovation-media@main/product-trend-watch/media-webp/atour-pillow-agilesupport.webp", alt: "AgileSupport® dynamic support — 3 foam layers" },
+      { type: "image", src: "https://fastly.jsdelivr.net/gh/dorisss0213/beauty-innovation-media@main/product-trend-watch/media-webp/atour-pillow-r6-zones.webp", alt: "R-6 internal zones — head, shoulder & neck mapping" },
+      { type: "image", src: "https://fastly.jsdelivr.net/gh/dorisss0213/beauty-innovation-media@main/product-trend-watch/media-webp/atour-pillow-packaging.webp", alt: "Cylindrical pack — rebound unboxing experience" },
+    ],
+  },
+  {
+    id: "atour-deep-sleep-fitted-sheet",
+    category: "home-textile",
+    trend: "deep-sleep-concept",
+    brand: "Atour Planet (亚朵星球)",
+    name: "Deep Sleep Fitted Sheet 2.0",
+    features: [
+      "<strong>Zoned stretch &amp; structure</strong> — HexaSoftAir® skin-touch bed surface sits flat; elastic long sides wrap the mattress while woven short edges hold their shape — hugs the mattress, stays in place, reduces creasing",
+      "<strong>Thoughtful details</strong> — contrast-coloured inner short edge so you find the orientation at a glance; corners align in one pull (logo below the mattress waterline), stays put through tossing — no re-tucking after waking up",
+      "<strong>Easy to store</strong> — folds up easily and packs away without creasing",
+    ],
+    media: [
+      { type: "image", src: "https://fastly.jsdelivr.net/gh/dorisss0213/beauty-innovation-media@main/product-trend-watch/media-webp/atour-sheet-hexasoftair.webp", alt: "HexaSoftAir® surface + reinforced / elastic sides" },
+      { type: "image", src: "https://fastly.jsdelivr.net/gh/dorisss0213/beauty-innovation-media@main/product-trend-watch/media-webp/atour-sheet-details.webp", alt: "Details — contrast edge, one-pull corners, no-shift sleep, easy fold" },
+    ],
+  },
+  {
+    id: "atour-deep-sleep-summer-quilt",
+    category: "home-textile",
+    trend: "deep-sleep-concept",
+    brand: "Atour Planet (亚朵星球)",
+    name: "Deep Sleep Summer Quilt Pro 3.0",
+    features: [
+      "<strong>No duvet cover needed, whole quilt machine washable</strong> — use it straight on the bed and throw the entire quilt in the wash",
+      "<strong>A temperature system, not just a quilt</strong> — three-layer Drybreezer® construction (50D nylon-spandex top, DynamicOxy® chips regulating temperature &amp; humidity, ClouduCaress® skin-touch layer); different fabrics on each side give two different feels against the skin — \u201cno more cold uncovered, hot covered\u201d",
+      "<strong>Storage built in</strong> — storage hanger &amp; dust bag included: hangs or folds, so off-season storage stays neat and dust-free",
+    ],
+    media: [
+      { type: "image", src: "https://fastly.jsdelivr.net/gh/dorisss0213/beauty-innovation-media@main/product-trend-watch/media-webp/atour-quilt-hero.webp", alt: "Summer quilt hero — cool all night" },
+      { type: "image", src: "https://fastly.jsdelivr.net/gh/dorisss0213/beauty-innovation-media@main/product-trend-watch/media-webp/atour-quilt-drybreezer.webp", alt: "Drybreezer® 3-layer temperature system" },
+      { type: "image", src: "https://fastly.jsdelivr.net/gh/dorisss0213/beauty-innovation-media@main/product-trend-watch/media-webp/atour-quilt-storage.webp", alt: "Hang or fold — seasonal storage with hanger & dust bag" },
+    ],
+  },
+];
+
+/* ============================================================ */
+
+const $ = (s, el = document) => el.querySelector(s);
+
+function mediaHTML(p) {
+  const items = Array.isArray(p.media) ? p.media : [p.media];
+  if (items.length === 1) return `<div class="media">${slideHTML(items[0], true)}</div>`;
+  const slides = items.map((m, i) =>
+    `<div class="slide${i === 0 ? " on" : ""}">${slideHTML(m, i === 0)}</div>`).join("");
+  const dots = items.map((_, i) =>
+    `<i class="${i === 0 ? "on" : ""}" data-i="${i}"></i>`).join("");
+  return `<div class="media"><div class="car" data-car>
+    ${slides}
+    <div class="dots">${dots}</div>
+    <button class="arrow prev" aria-label="previous">‹</button>
+    <button class="arrow next" aria-label="next">›</button>
+  </div></div>`;
+}
+
+function slideHTML(m, isFirst) {
+  if (m.type === "video") {
+    return `<video controls preload="none" playsinline${m.poster ? ` poster="${m.poster}"` : ""} src="${m.src}"></video>`;
+  }
+  const posStyle = m.pos ? ` style="object-position:${m.pos}"` : "";
+  /* non-first slides defer loading until the slide becomes visible */
+  const srcAttr = isFirst ? `src="${m.src}"` : `data-src="${m.src}"`;
+  return `<img loading="lazy" ${srcAttr} alt="${m.alt || ""}"${posStyle}>`;
+}
+
+/* if the jsDelivr CDN rate-limits (403), fall back to raw.githubusercontent.com */
+document.addEventListener("error", e => {
+  const img = e.target;
+  if (img.tagName !== "IMG" || img.dataset.retried) return;
+  if (!img.src.includes("jsdelivr.net/gh/")) return;
+  img.dataset.retried = "1";
+  img.src = img.src
+    .replace("https://fastly.jsdelivr.net/gh/", "https://raw.githubusercontent.com/")
+    .replace("https://cdn.jsdelivr.net/gh/", "https://raw.githubusercontent.com/")
+    .replace(/@main\//, "/main/");
+}, true);
+
+function cardHTML(p) {
+  return `<article class="card" id="${p.id}">
+    ${mediaHTML(p)}
+    <div class="body">
+      <span class="brand">${p.brand}</span>
+      <div class="name">${p.name}</div>
+      <ul class="feats">${p.features.map(f => `<li>${f}</li>`).join("")}</ul>
+      ${p.sales ? `<div class="sales">📈 ${p.sales}</div>` : ""}
+      ${p.source ? `<div class="src">Source: ${p.source.url ? `<a href="${p.source.url}" target="_blank" rel="noopener">${p.source.label}</a>` : p.source.label}</div>` : ""}
+    </div>
+  </article>`;
+}
+
+/* ---------- category filter ---------- */
+let activeCat = "all";
+
+function renderFilters() {
+  const chips = [{ id: "all", emoji: "✦", name: "All" }, ...CATEGORIES];
+  $("#filters").innerHTML = chips.map(c => {
+    const n = c.id === "all" ? PRODUCTS.length : PRODUCTS.filter(p => p.category === c.id).length;
+    return `<button class="chip${activeCat === c.id ? " on" : ""}" data-cat="${c.id}">${c.emoji} ${c.name}<span class="n">${n}</span></button>`;
+  }).join("");
+}
+
+function render() {
+  const app = $("#app");
+  const cats = activeCat === "all" ? CATEGORIES : CATEGORIES.filter(c => c.id === activeCat);
+  let total = 0;
+  app.innerHTML = cats.map(cat => {
+    const catProducts = PRODUCTS.filter(p => p.category === cat.id);
+    total += catProducts.length;
+    const trends = TRENDS.filter(t => t.category === cat.id);
+    return `<section class="cat" id="cat-${cat.id}">
+      <div class="cat-head">
+        <h2>${cat.emoji} ${cat.name}</h2>
+        <span class="count">${catProducts.length} product${catProducts.length === 1 ? "" : "s"} · ${trends.length} trend${trends.length === 1 ? "" : "s"}</span>
+      </div>
+      ${trends.map(t => {
+        const tps = catProducts.filter(p => p.trend === t.id);
+        return `<div class="trend" id="trend-${t.id}">
+          <div class="trend-head">
+            <span class="t-label">Trend</span>
+            <h3>${t.name}</h3>
+            <span class="t-count">${tps.length} product${tps.length === 1 ? "" : "s"}</span>
+          </div>
+          ${t.summary ? `<div class="trend-summary">${t.summary}</div>` : ""}
+          <div class="grid">${tps.map(cardHTML).join("")}</div>
+        </div>`;
+      }).join("")}
+    </section>`;
+  }).join("");
+
+  $("#siteMeta").textContent = `${CATEGORIES.length} category · ${TRENDS.length} trend · ${PRODUCTS.length} products · showing ${total} · updated 2026-11-19`;
+  fitLandscapeImages();
+}
+
+/* landscape images (width >= height) are shown complete, never cropped */
+function fitImg(img) {
+  const apply = () => { if (img.naturalWidth && img.naturalWidth >= img.naturalHeight) img.classList.add("fit"); };
+  if (img.complete) apply();
+  else img.addEventListener("load", apply, { once: true });
+}
+function fitLandscapeImages() {
+  document.querySelectorAll(".media img[src]").forEach(fitImg);
+}
+
+/* carousel wiring (event delegation) */
+document.addEventListener("click", e => {
+  const dot = e.target.closest(".car .dots i");
+  const arrow = e.target.closest(".car .arrow");
+  if (!dot && !arrow) return;
+  const car = e.target.closest(".car");
+  const slides = [...car.querySelectorAll(".slide")];
+  const dots = [...car.querySelectorAll(".dots i")];
+  let cur = slides.findIndex(s => s.classList.contains("on"));
+  let next = dot ? +dot.dataset.i
+    : (cur + (arrow.classList.contains("next") ? 1 : -1) + slides.length) % slides.length;
+  slides[cur].classList.remove("on");
+  slides[cur].querySelectorAll("video").forEach(v => v.pause());
+  slides[next].classList.add("on");
+  /* hydrate deferred images on first view */
+  slides[next].querySelectorAll("img[data-src]").forEach(img => {
+    img.src = img.dataset.src;
+    img.removeAttribute("data-src");
+    fitImg(img);
+  });
+  dots[cur].classList.remove("on");
+  dots[next].classList.add("on");
+});
+
+/* filter chips */
+document.addEventListener("click", e => {
+  const chip = e.target.closest(".filters .chip");
+  if (!chip) return;
+  activeCat = chip.dataset.cat;
+  renderFilters();
+  render();
+  window.scrollTo({ top: 0 });
+});
+
+renderFilters();
+render();
+</script>
+</body>
+</html>
