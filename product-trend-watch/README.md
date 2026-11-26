@@ -33,6 +33,8 @@
 
 ## 注意
 
+- **deploy 会整页覆盖线上的 index.html**：动手改之前先 git pull，改完先 git push 再 deploy push——否则别人已部署但未 push 的修改会被你覆盖丢失（2026-11-26 发生过一次，Yuki 的卡片被覆盖，靠服务器媒体恢复）
+
 - `PRODUCTS` 里的 category/trend 引用必须存在，否则卡片不会渲染
 - 图片加载失败会自动回退 raw.githubusercontent.com（jsDelivr 限流 403 时）
 - 改完先本地预览再部署
