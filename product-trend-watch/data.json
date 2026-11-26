@@ -133,13 +133,7 @@
       "id": "disruptive-format-supplement",
       "category": "supplement",
       "name": "Disruptive Format",
-      "summary": "Supplements moving beyond pills and powders — waterless oral mists and other portable, single-dose formats that make daily nutrient intake faster, easier and more intuitive."
-    },
-    {
-      "id": "wearable-supplement",
-      "category": "supplement",
-      "name": "Wearable Supplement",
-      "summary": "Supplements as wearable patches — better absorption format meets fun, lifestyle-forward design. Not yet a category in China, but gaining traction in US/UK/EU. Barrière is the standout: turns patches into tattoo-like accessories."
+      "summary": "Supplements moving beyond pills and powders — waterless oral mists and wearable vitamin patches: portable, single-dose formats that make daily nutrient intake faster, easier and more intuitive."
     }
   ],
   "products": [
@@ -309,7 +303,7 @@
     {
       "id": "barriere-functional-patches",
       "category": "supplement",
-      "trend": "wearable-supplement",
+      "trend": "disruptive-format-supplement",
       "brand": "Barrière",
       "name": "Functional Supplement Patches",
       "features": [
