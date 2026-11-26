@@ -85,13 +85,7 @@
       "id": "deep-sleep-concept",
       "category": "home-textile",
       "name": "Deep Sleep Concept",
-      "summary": "A whole brand built around one idea — deep sleep. Every product, detail, package and ad starts from it, turning bedding from a category buy into a system you trust and re-buy."
-    },
-    {
-      "id": "sleep-aids",
-      "category": "home-textile",
-      "name": "Sleep Aids",
-      "summary": "Beyond bedding — small sleep accessories building a micro-ritual around falling asleep: padded sleep belts filling the waist gap, weighted masks and hoods with botanical scent pouches, and pockets for disposable steam eye masks. Support, weight, warmth and aroma in one routine."
+      "summary": "A whole brand built around one idea — deep sleep. Bedding engineered for temperature control (quilt) and body support (pillow, sheet), plus portable sleep-aid accessories: every product, detail and package starts from deep sleep, turning bedding from a category buy into a system you trust and re-buy."
     },
     {
       "id": "disruptive-format-snacking",
@@ -1037,8 +1031,9 @@
       "brand": "Atour Planet (亚朵星球)",
       "name": "Deep Sleep Summer Quilt Pro 3.0",
       "features": [
+        "<strong>Sleep promoted through temperature control</strong> — the quilt's core mechanism is keeping the sleep microclimate in the ideal zone: Drybreezer® three-layer construction with DynamicOxy® chips regulating temperature two-way, so you're neither too hot nor too cold and stay in deep sleep longer",
         "<strong>No duvet cover needed, whole quilt machine washable</strong> — use it straight on the bed and throw the entire quilt in the wash",
-        "<strong>A temperature system, not just a quilt</strong> — three-layer Drybreezer® construction (50D nylon-spandex top, DynamicOxy® chips regulating temperature &amp; humidity, ClouduCaress® skin-touch layer); different fabrics on each side give two different feels against the skin — “no more cold uncovered, hot covered”",
+        "<strong>Full-series temperature lineup</strong> — beyond the Summer Pro 3.0, the line also has a Winter Pro 2.0 (dual-layer cold-block + moisture-wick, warmth ≈ an 800-fill-power down quilt) and an All-Season Pro 2.0 (top layer stores heat, bottom layer wicks sweat, 9m interlocking zipper) — one control-temperature story across the year",
         "<strong>Storage built in</strong> — storage hanger &amp; dust bag included: hangs or folds, so off-season storage stays neat and dust-free"
       ],
       "media": [
@@ -1533,7 +1528,7 @@
     {
       "id": "ack-sleep-belt",
       "category": "home-textile",
-      "trend": "sleep-aids",
+      "trend": "deep-sleep-concept",
       "brand": "ACK 艾斯凯",
       "name": "Padded Sleep Belt — Waist Gap Support",
       "features": [
@@ -1557,7 +1552,7 @@
     {
       "id": "mdog-scented-weighted-mask",
       "category": "home-textile",
-      "trend": "sleep-aids",
+      "trend": "deep-sleep-concept",
       "brand": "MDOG 米度狗",
       "name": "Weighted Sleep Mask with Botanical Scent Pouch",
       "features": [
@@ -1580,7 +1575,7 @@
     {
       "id": "zhenshiming-steam-eye-mask",
       "category": "home-textile",
-      "trend": "sleep-aids",
+      "trend": "deep-sleep-concept",
       "brand": "珍视明",
       "name": "Goodnight Disposable Steam Eye Mask",
       "features": [
@@ -1603,7 +1598,7 @@
     {
       "id": "mdog-weighted-sleep-hood",
       "category": "home-textile",
-      "trend": "sleep-aids",
+      "trend": "deep-sleep-concept",
       "brand": "MDOG 米度狗",
       "name": "Weighted Sleep Hood — Light-Blocking + Warmth",
       "features": [
@@ -1632,7 +1627,7 @@
     {
       "id": "steam-pocket-weighted-mask",
       "category": "home-textile",
-      "trend": "sleep-aids",
+      "trend": "deep-sleep-concept",
       "brand": "BRAND TBC",
       "name": "Weighted Sleep Mask with Steam-Mask Pocket",
       "features": [
