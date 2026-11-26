@@ -1483,99 +1483,56 @@
       ]
     },
     {
-      "id": "boudart-sleep-mist",
+      "id": "sleep-pillow-mists",
       "category": "supplement",
       "trend": "sleep-support",
-      "brand": "BOUDART LABORATORIES (铂得实验室)",
-      "name": "Cloud Pharma Sleep & Pillow Mist",
+      "brand": "BOUDART LABORATORIES 铂得实验室 · L'OCCITANE 欧舒丹",
+      "name": "Aromatherapy Sleep Pillow Mists (香氛助眠喷雾)",
       "features": [
-        "<strong>Aromatherapy for sleep</strong> — 香氛疗法助眠: mist onto pillow and sheets before bed; a soft cloud-floral scent (云朵香氛) calms pre-sleep anxiety and eases tossing and turning",
-        "<strong>Essential-oil deep-sleep formula</strong> — botanical essential oils build a wind-down bedtime ritual without melatonin or actives",
-        "<strong>Mass-market price, strong repurchase</strong> — 40 ml at ¥69; buyers highlight the gentle, comforting scent in reviews"
+        "<strong>Same bedtime ritual, two price points</strong> — BOUDART Cloud Pharma (40ml ¥69, mass market, cloud-floral 云朵香氛) and L'OCCITANE Cocon de Sérénité (100ml ¥175, prestige, Baume d'Oréiller botanical blend) both sell sleep purely through fragrance therapy",
+        "<strong>Mist onto pillow &amp; sheets before bed</strong> — scent-led wind-down ritual with no melatonin or actives; the calming fragrance eases pre-sleep anxiety and builds a re-buyable nightly habit"
       ],
-      "sales": "10,000+ sold, 21k+ added to cart, 173 repurchase notes <span class=\"hedge\">(Tmall listing)</span>",
+      "sales": "10,000+ sold, 21k+ cart adds, 173 repurchase notes <span class=\"hedge\">(BOUDART, Tmall)</span> · 100+ sold <span class=\"hedge\">(L'OCCITANE, Tmall 国际)</span>",
       "media": [
         {
           "type": "image",
           "src": "https://fastly.jsdelivr.net/gh/dorisss0213/beauty-innovation-media@main/product-trend-watch/media-webp/boudart-sleep-mist.webp",
-          "alt": "Boudart Cloud Pharma sleep mist banner"
-        }
-      ]
-    },
-    {
-      "id": "occitane-pillow-mist",
-      "category": "supplement",
-      "trend": "sleep-support",
-      "brand": "L'OCCITANE (欧舒丹)",
-      "name": "Cocon de Sérénité Pillow Mist",
-      "features": [
-        "<strong>Premium aromatherapy pillow mist</strong> — L'Occitane en Provence's bedtime ritual: mist over pillow and bedding so the calming botanical scent (Baume d'Oréiller blend) lingers through the night",
-        "<strong>Scent-led, no actives</strong> — sleep support purely through fragrance therapy, positioned as a cocooning self-care ritual rather than a supplement",
-        "<strong>Prestige reference point</strong> — 100 ml at ¥175 EU direct-import; the high-end benchmark against domestic budget mists"
-      ],
-      "sales": "100+ sold <span class=\"hedge\">(Tmall 国际, 欧洲直邮)</span>",
-      "media": [
+          "alt": "BOUDART Cloud Pharma sleep & pillow mist banner"
+        },
         {
           "type": "image",
           "src": "https://fastly.jsdelivr.net/gh/dorisss0213/beauty-innovation-media@main/product-trend-watch/media-webp/occitane-pillow-mist.webp",
-          "alt": "L'Occitane Cocon de Sérénité pillow mist bottle"
+          "alt": "L'OCCITANE Cocon de Sérénité pillow mist bottle"
         }
       ]
     },
     {
-      "id": "blueglass-dreamy-sleep-yogurt",
+      "id": "sleep-functional-drinks",
       "category": "supplement",
       "trend": "sleep-support",
-      "brand": "Blueglass (阿秋拉尕)",
-      "name": "Dreamy Sleep Collagen Yogurt (晚安胶原酸奶)",
+      "brand": "Blueglass 阿秋拉尕 · 盒马×三元 · 蒙牛 NOPA",
+      "name": "Goodnight Functional Drinks (晚安功能饮品)",
       "features": [
-        "<strong>Bedtime function in a fresh yogurt cup</strong> — GABA + collagen peptides with a jujube-seed / lily / poria herbal blend; ¥45 standard / ¥49 advanced per 280ml cup",
-        "<strong>Food-as-function, made viral</strong> — \"drink it and fall asleep\" positioning turned a premium yogurt into a sleep remedy; polarizing reviews only amplified the hype"
+        "<strong>Everyday food turned into a sleep aid</strong> — yogurt (GABA + collagen peptides + jujube seed/lily/poria), fresh milk (12,500pg native melatonin per 250ml via patented herd light control, no additives) and a milk drink (GABA 240mg + L-theanine, zebrafish-validated)",
+        "<strong>Works at every price tier</strong> — ¥29.9/4-bottle fresh-channel milk, ¥45–49 premium yogurt cup, big-dairy clean-label carton: sleep positioning lifts all of them",
+        "<strong>Viral \"drink it and fall asleep\" claims</strong> — social buzz, sell-outs and polarizing reviews keep fueling the category"
       ],
-      "sales": "20,000+ Xiaohongshu posts on 晚安酸奶 <span class=\"hedge\">(social listening)</span>",
+      "sales": "20,000+ XHS posts <span class=\"hedge\">(Blueglass 晚安酸奶)</span> · sales up 5×+, 1,400+ orders/mo in Shanghai <span class=\"hedge\">(盒马晚安牛奶)</span> · ¥1.55M GMV in first 3 months <span class=\"hedge\">(蒙牛晚上好)</span>",
       "media": [
         {
           "type": "image",
           "src": "https://fastly.jsdelivr.net/gh/dorisss0213/beauty-innovation-media@main/product-trend-watch/media-webp/blueglass-dreamy-sleep-yogurt.webp",
-          "alt": "Blueglass Dreamy Sleep collagen yogurt poster"
-        }
-      ]
-    },
-    {
-      "id": "hema-goodnight-milk",
-      "category": "supplement",
-      "trend": "sleep-support",
-      "brand": "盒马 × 三元 (Freshippo / Sanyuan)",
-      "name": "Goodnight Milk — 10× Native Melatonin (晚安牛奶)",
-      "features": [
-        "<strong>Sleep function in plain fresh milk</strong> — 12,500pg native melatonin per 250ml bottle (10×+ regular milk), raised naturally via patented herd light/feed control instead of additives",
-        "<strong>Priced like daily milk, hyped like a launch</strong> — ¥29.9 for 4 bottles; repeatedly sold out after going viral on social media"
-      ],
-      "sales": "No.1 riser on Hema breakfast chart, sales up 5×+, 1,400+ orders/month in Shanghai <span class=\"hedge\">(launch coverage)</span>",
-      "media": [
+          "alt": "Blueglass Dreamy Sleep collagen yogurt"
+        },
         {
           "type": "image",
           "src": "https://fastly.jsdelivr.net/gh/dorisss0213/beauty-innovation-media@main/product-trend-watch/media-webp/hema-goodnight-milk.webp",
-          "alt": "Goodnight milk with 10x native melatonin"
-        }
-      ]
-    },
-    {
-      "id": "mengniu-good-evening-milk",
-      "category": "supplement",
-      "trend": "sleep-support",
-      "brand": "蒙牛 NOPA 营养研究院",
-      "name": "Good Evening Milk — GABA Night Drink (晚上好)",
-      "features": [
-        "<strong>Big-dairy functional milk</strong> — GABA (240mg) + L-theanine (99mg) in a 99% milk base, clean label with no thickeners or preservatives; 200ml mini smile-carton",
-        "<strong>Claim backed by testing</strong> — sleep efficacy validated in a zebrafish model; positioned around the bedtime ritual (\"一夜安然，焕活明天\")"
-      ],
-      "sales": "1,000–6,000 orders/month on Tmall; ¥1.55M GMV in first 3 months <span class=\"hedge\">(2024–25)</span>",
-      "media": [
+          "alt": "Hema × Sanyuan goodnight milk, 10x native melatonin"
+        },
         {
           "type": "image",
           "src": "https://fastly.jsdelivr.net/gh/dorisss0213/beauty-innovation-media@main/product-trend-watch/media-webp/mengniu-good-evening-milk.webp",
-          "alt": "Mengniu Good Evening milk carton"
+          "alt": "Mengniu Good Evening GABA milk carton"
         }
       ]
     },
