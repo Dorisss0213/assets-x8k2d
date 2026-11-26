@@ -1548,25 +1548,37 @@
       ]
     },
     {
-      "id": "mdog-scented-weighted-mask",
+      "id": "weighted-scented-sleep-masks",
       "category": "home-textile",
       "trend": "sleep-aid",
-      "brand": "MDOG 米度狗",
-      "name": "Weighted Sleep Mask with Botanical Scent Pouch",
+      "brand": "MDOG 米度狗 · BRAND TBC",
+      "name": "Weighted Sleep Mask × Aromatherapy (重力助眠眼罩)",
       "features": [
-        "<strong>Removable botanical pouch</strong> — dried herbs (lavender, citrus peel and more) in a see-through, replaceable insert — real botanicals, not fragrance coating",
-        "<strong>Weighted + scented in one</strong> — gentle pressure with two scent blends (Floral Night / Mountain Breeze) for winding down"
+        "<strong>Weighted pressure × scent, one mask</strong> — the core combo: gentle, evenly-spread weight relaxes the face for sleep, paired with aromatherapy — real dried botanicals (lavender, citrus peel) or a self-heating steam insert (~45°C warmth up to 45 min)",
+        "<strong>Modular, swappable scent systems</strong> — MDOG uses a see-through replaceable herb pouch (Floral Night / Mountain Breeze blends); BRAND TBC builds a pocket that slots disposable steam masks, and doubles as a neck heat wrap — the aromatherapy part is user-refreshable, driving re-buy",
+        "<strong>Dual-fabric, all-season builds</strong> — silk-touch cool side vs warm fleece side, layered light blocking (6 layers on BRAND TBC)"
       ],
+      "sales": "3,000+ sold <span class=\"hedge\">(BRAND TBC, listing claim)</span>",
       "media": [
         {
           "type": "image",
           "src": "https://fastly.jsdelivr.net/gh/dorisss0213/beauty-innovation-media@main/product-trend-watch/media-webp/mdog-scented-mask-1.webp",
-          "alt": "Removable botanical pouch with real dried herbs"
+          "alt": "MDOG weighted sleep mask with botanical pouch"
         },
         {
           "type": "image",
           "src": "https://fastly.jsdelivr.net/gh/dorisss0213/beauty-innovation-media@main/product-trend-watch/media-webp/mdog-scented-mask-2.webp",
-          "alt": "Two scent blends"
+          "alt": "Replaceable dried-botanical scent insert"
+        },
+        {
+          "type": "image",
+          "src": "https://fastly.jsdelivr.net/gh/dorisss0213/beauty-innovation-media@main/product-trend-watch/media-webp/steam-pocket-mask-1.webp",
+          "alt": "Weighted mask with steam-mask pocket"
+        },
+        {
+          "type": "image",
+          "src": "https://fastly.jsdelivr.net/gh/dorisss0213/beauty-innovation-media@main/product-trend-watch/media-webp/steam-pocket-mask-2.webp",
+          "alt": "Steam insert warmth and neck-wrap use"
         }
       ]
     },
@@ -1619,41 +1631,6 @@
           "type": "image",
           "src": "https://fastly.jsdelivr.net/gh/dorisss0213/beauty-innovation-media@main/product-trend-watch/media-webp/mdog-sleep-hood-3.webp",
           "alt": "Full head and ear coverage"
-        }
-      ]
-    },
-    {
-      "id": "steam-pocket-weighted-mask",
-      "category": "home-textile",
-      "trend": "sleep-aid",
-      "brand": "BRAND TBC",
-      "name": "Weighted Sleep Mask with Steam-Mask Pocket",
-      "features": [
-        "<strong>Built-in pocket for a disposable steam eye mask</strong> — slots in a self-heating insert for ~45°C warmth up to 45 minutes",
-        "<strong>Doubles as a neck heat wrap</strong> — with the insert in, wrap around the back of the neck to ease muscle tension with gentle heat",
-        "<strong>Dual-sided fabric + 6-layer blackout</strong> — silk-touch side and warm fleece side, layered light blocking"
-      ],
-      "sales": "3,000+ sold <span class=\"hedge\">(listing claim)</span>",
-      "media": [
-        {
-          "type": "image",
-          "src": "https://fastly.jsdelivr.net/gh/dorisss0213/beauty-innovation-media@main/product-trend-watch/media-webp/steam-pocket-mask-1.webp",
-          "alt": "Steam-mask pocket and neck-wrap use"
-        },
-        {
-          "type": "image",
-          "src": "https://fastly.jsdelivr.net/gh/dorisss0213/beauty-innovation-media@main/product-trend-watch/media-webp/steam-pocket-mask-2.webp",
-          "alt": "Dual-sided fabric"
-        },
-        {
-          "type": "image",
-          "src": "https://fastly.jsdelivr.net/gh/dorisss0213/beauty-innovation-media@main/product-trend-watch/media-webp/steam-pocket-mask-3.webp",
-          "alt": "Adjustable velcro"
-        },
-        {
-          "type": "image",
-          "src": "https://fastly.jsdelivr.net/gh/dorisss0213/beauty-innovation-media@main/product-trend-watch/media-webp/steam-pocket-mask-4.webp",
-          "alt": "6-layer blackout structure"
         }
       ]
     },
