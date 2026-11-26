@@ -300,6 +300,12 @@ const TRENDS = [
     name: "Super Simple / Minimal Materials",
     summary: "Super simple shoes made with one or just a couple of materials — mono-material construction strips the shoe back to essentials: easier production, lower cost, recyclable by design, and an honest minimal aesthetic.",
   },
+  {
+    id: "sleep-support",
+    category: "supplement",
+    name: "Sleep Support",
+    summary: "Sleep aids reimagined as portable, single-dose formats — snap-open GABA nasal swabs with botanical extracts and exosome delivery. A bedtime routine you can carry in your pocket: home, office naps, travel.",
+  },
 ];
 
 const PRODUCTS = [
@@ -1122,6 +1128,24 @@ const PRODUCTS = [
       { type: "image", src: "https://fastly.jsdelivr.net/gh/dorisss0213/beauty-innovation-media@main/product-trend-watch/media-webp/chedoir-glow-shark-slides-3.webp", alt: "Day vs night comparison" },
     ],
   },
+  {
+    id: "gaba-bedtime-swab",
+    category: "supplement",
+    trend: "sleep-support",
+    brand: "Plexo",
+    name: "GABA Bedtime Nasal Swab",
+    features: [
+      "<strong>Snap-open, single-use nasal swab</strong> — break the tip and swirl inside the nose 4–5 times; sealed capsule chamber and 100% degreased cotton keep every dose hygienic",
+      "<strong>GABA + 3 botanical extracts</strong> — 99.2% GABA with herbal extracts claimed to support melatonin and GABA activity; exosome delivery for faster absorption",
+      "<strong>Pocket-size sleep routine</strong> — card-style pack for home, office naps and travel",
+    ],
+    media: [
+      { type: "image", src: "https://fastly.jsdelivr.net/gh/dorisss0213/beauty-innovation-media@main/product-trend-watch/media-webp/gaba-bedtime-swab-1.webp", alt: "GABA + botanicals + exosome formula" },
+      { type: "image", src: "https://fastly.jsdelivr.net/gh/dorisss0213/beauty-innovation-media@main/product-trend-watch/media-webp/gaba-bedtime-swab-2.webp", alt: "Snap-open swab and capsule chamber" },
+      { type: "image", src: "https://fastly.jsdelivr.net/gh/dorisss0213/beauty-innovation-media@main/product-trend-watch/media-webp/gaba-bedtime-swab-3.webp", alt: "Lab data and patent" },
+      { type: "image", src: "https://fastly.jsdelivr.net/gh/dorisss0213/beauty-innovation-media@main/product-trend-watch/media-webp/gaba-bedtime-swab-4.webp", alt: "Pocket pack for home, office, travel" },
+    ],
+  },
 ];
 
 /* ============================================================ */
@@ -1221,7 +1245,7 @@ function render() {
     </section>`;
   }).join("");
 
-  $("#siteMeta").textContent = `${CATEGORIES.length} category · ${TRENDS.length} trend · ${PRODUCTS.length} products · showing ${total} · updated 2026-11-24`;
+  $("#siteMeta").textContent = `${CATEGORIES.length} category · ${TRENDS.length} trend · ${PRODUCTS.length} products · showing ${total} · updated 2026-11-26`;
   fitLandscapeImages();
 }
 
