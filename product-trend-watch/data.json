@@ -82,9 +82,9 @@
       "summary": "Bedding that doesn't just touch your skin — it cares for it overnight. Probiotics, hyaluronic acid and collagen woven into fabric: your bed becomes the last step of your skincare routine."
     },
     {
-      "id": "deep-sleep-concept",
+      "id": "sleep-aid",
       "category": "home-textile",
-      "name": "Deep Sleep Concept",
+      "name": "Sleep Aid",
       "summary": "A whole brand built around one idea — deep sleep. Bedding engineered for temperature control (quilt) and body support (pillow, sheet), plus portable sleep-aid accessories: every product, detail and package starts from deep sleep, turning bedding from a category buy into a system you trust and re-buy."
     },
     {
@@ -968,7 +968,7 @@
     {
       "id": "atour-deep-sleep-pillow-pro",
       "category": "home-textile",
-      "trend": "deep-sleep-concept",
+      "trend": "sleep-aid",
       "brand": "Atour Planet (亚朵星球)",
       "name": "Deep Sleep Pillow Pro 4.0",
       "features": [
@@ -1003,7 +1003,7 @@
     {
       "id": "atour-deep-sleep-fitted-sheet",
       "category": "home-textile",
-      "trend": "deep-sleep-concept",
+      "trend": "sleep-aid",
       "brand": "Atour Planet (亚朵星球)",
       "name": "Deep Sleep Fitted Sheet 2.0",
       "features": [
@@ -1027,14 +1027,12 @@
     {
       "id": "atour-deep-sleep-summer-quilt",
       "category": "home-textile",
-      "trend": "deep-sleep-concept",
+      "trend": "sleep-aid",
       "brand": "Atour Planet (亚朵星球)",
       "name": "Deep Sleep Summer Quilt Pro 3.0",
       "features": [
         "<strong>Sleep promoted through temperature control</strong> — the quilt's core mechanism is keeping the sleep microclimate in the ideal zone: Drybreezer® three-layer construction with DynamicOxy® chips regulating temperature two-way, so you're neither too hot nor too cold and stay in deep sleep longer",
-        "<strong>No duvet cover needed, whole quilt machine washable</strong> — use it straight on the bed and throw the entire quilt in the wash",
-        "<strong>Full-series temperature lineup</strong> — beyond the Summer Pro 3.0, the line also has a Winter Pro 2.0 (dual-layer cold-block + moisture-wick, warmth ≈ an 800-fill-power down quilt) and an All-Season Pro 2.0 (top layer stores heat, bottom layer wicks sweat, 9m interlocking zipper) — one control-temperature story across the year",
-        "<strong>Storage built in</strong> — storage hanger &amp; dust bag included: hangs or folds, so off-season storage stays neat and dust-free"
+        "<strong>Full-series temperature lineup</strong> — beyond the Summer Pro 3.0, the line also has <strong>Deep Sleep Quilt · Winter Pro 2.0</strong> (dual-layer cold-block + moisture-wick, warmth ≈ an 800-fill-power down quilt) and <strong>Deep Sleep Quilt · All-Season Pro 2.0</strong> (top layer stores heat, bottom layer wicks sweat, 9m interlocking zipper) — one control-temperature story across the year"
       ],
       "media": [
         {
@@ -1528,7 +1526,7 @@
     {
       "id": "ack-sleep-belt",
       "category": "home-textile",
-      "trend": "deep-sleep-concept",
+      "trend": "sleep-aid",
       "brand": "ACK 艾斯凯",
       "name": "Padded Sleep Belt — Waist Gap Support",
       "features": [
@@ -1552,7 +1550,7 @@
     {
       "id": "mdog-scented-weighted-mask",
       "category": "home-textile",
-      "trend": "deep-sleep-concept",
+      "trend": "sleep-aid",
       "brand": "MDOG 米度狗",
       "name": "Weighted Sleep Mask with Botanical Scent Pouch",
       "features": [
@@ -1575,7 +1573,7 @@
     {
       "id": "zhenshiming-steam-eye-mask",
       "category": "home-textile",
-      "trend": "deep-sleep-concept",
+      "trend": "sleep-aid",
       "brand": "珍视明",
       "name": "Goodnight Disposable Steam Eye Mask",
       "features": [
@@ -1598,7 +1596,7 @@
     {
       "id": "mdog-weighted-sleep-hood",
       "category": "home-textile",
-      "trend": "deep-sleep-concept",
+      "trend": "sleep-aid",
       "brand": "MDOG 米度狗",
       "name": "Weighted Sleep Hood — Light-Blocking + Warmth",
       "features": [
@@ -1627,7 +1625,7 @@
     {
       "id": "steam-pocket-weighted-mask",
       "category": "home-textile",
-      "trend": "deep-sleep-concept",
+      "trend": "sleep-aid",
       "brand": "BRAND TBC",
       "name": "Weighted Sleep Mask with Steam-Mask Pocket",
       "features": [
