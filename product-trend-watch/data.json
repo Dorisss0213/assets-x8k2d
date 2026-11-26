@@ -40,12 +40,6 @@
       "summary": "Snacks repositioned as nutrition delivery — fortification (calcium, iron, zinc, protein) plus play/interactive formats that make 'functional' feel fun, especially for kids."
     },
     {
-      "id": "wearable-supplement",
-      "category": "supplement",
-      "name": "Wearable Supplement",
-      "summary": "Supplements as wearable patches — better absorption format meets fun, lifestyle-forward design. Not yet a category in China, but gaining traction in US/UK/EU. Barrière is the standout: turns patches into tattoo-like accessories."
-    },
-    {
       "id": "sleep-support",
       "category": "supplement",
       "name": "Sleep Support",
@@ -140,6 +134,12 @@
       "category": "supplement",
       "name": "Disruptive Format",
       "summary": "Supplements moving beyond pills and powders — waterless oral mists and other portable, single-dose formats that make daily nutrient intake faster, easier and more intuitive."
+    },
+    {
+      "id": "wearable-supplement",
+      "category": "supplement",
+      "name": "Wearable Supplement",
+      "summary": "Supplements as wearable patches — better absorption format meets fun, lifestyle-forward design. Not yet a category in China, but gaining traction in US/UK/EU. Barrière is the standout: turns patches into tattoo-like accessories."
     }
   ],
   "products": [
