@@ -205,9 +205,8 @@ const CATEGORIES = [
   { id: "oral-care", name: "Oral Care", emoji: "🦷" },
   { id: "coffee-tea", name: "Coffee & Tea", emoji: "☕" },
   { id: "home-textile", name: "Home Textile", emoji: "🛏️" },
-  { id: "kids-shoe", name: "Kids Shoe", emoji: "👟" },
   { id: "snacking", name: "Snacking", emoji: "🍿" },
-  { id: "footwear", name: "Footwear", emoji: "🥾" },
+  { id: "shoe", name: "Shoe", emoji: "👟" },
 ];
 
 const TRENDS = [
@@ -265,25 +264,7 @@ const TRENDS = [
     name: "Deep Sleep Concept",
     summary: "A whole brand built around one idea — deep sleep. Every product, detail, package and ad starts from it, turning bedding from a category buy into a system you trust and re-buy.",
   },
-  {
-    id: "charm",
-    category: "kids-shoe",
-    name: "Charm",
-    summary: "One tiny accessory becomes a whole brand — rotary-dial laces with swappable, collectible buckle charms. Practical convenience drives the purchase; charm styles and IP collabs drive repeat purchase (PopSockets model for shoes).",
-  },
-  {
-    id: "water-ready-eva",
-    category: "kids-shoe",
-    name: "Water-Ready EVA",
-    summary: "Crocs-style molded EVA clogs for kids — cutout vents for drainage and breathability, rubber outsoles for wet-surface grip. Built for water play, stream trekking and summer outdoor.",
-  },
-  {
-    id: "ip-collab-play",
-    category: "kids-shoe",
-    name: "IP Collab / Play",
-    summary: "Shoes as a play platform — IP collabs like Crocs × LEGO wrap brick studs around the sole and pack themed charms for DIY styling. The shoe is the toy; accessories and customisation drive the fun (and the add-on sales).",
-  },
-  {
+        {
     id: "disruptive-format-snacking",
     category: "snacking",
     name: "Disruptive Format",
@@ -297,27 +278,27 @@ const TRENDS = [
   },
   {
     id: "4d-printing",
-    category: "footwear",
-    name: "4D / 3D Printing",
+    category: "shoe",
+    name: "3D/4D Printing",
     summary: "Footwear printed in one shot — lattice midsole, cage upper and outsole fused into a single structure, no glue, no stitching. Chinese indie labels like 2AM turn this lab technology into radical sculpted silhouettes at accessible prices.",
   },
-  {
-    id: "cozy-materials",
-    category: "footwear",
-    name: "Cozy Materials",
-    summary: "Slipper-grade comfort moving outdoors — teddy fleece, plush bouclé textures and soft textured rubber soles blur the line between house shoes and street footwear.",
-  },
-  {
-    id: "five-toe-barefoot",
-    category: "footwear",
-    name: "Five-Toe / Barefoot",
-    summary: "Five-toe shoes having a fashion moment — minimal materials (knit, mesh, microfiber) and thin rubber outsoles, in silhouettes from strappy flats to graphic wrap-straps and high-cut booties. The barefoot look itself becomes the statement.",
-  },
-  {
+      {
     id: "one-piece-eva",
-    category: "footwear",
+    category: "shoe",
     name: "One-Piece EVA",
-    summary: "Injection-molded EVA as the whole design story — sculpted, marbled sole platforms with interchangeable uppers (UPPERVOID knit vs puffer), or classic silhouettes differentiated by statement finishes (NATIVE glitter gradients, prints). One mold, endless looks.",
+    summary: "The whole shoe — or its sole — moulded as a single piece of EVA: sculpted shapes, embedded textures and statement finishes with almost no assembly. Lightweight, washable and design-led.",
+  },
+  {
+    id: "toyfication",
+    category: "shoe",
+    name: "Toyfication / Build Your Shoe",
+    summary: "Shoes that double as toys — buildable, collectible and IP-collab driven (LEGO-style builds, swappable charm buckles). The shoe becomes a play platform: kids customise, collect and re-buy.",
+  },
+  {
+    id: "minimal-materials",
+    category: "shoe",
+    name: "Super Simple / Minimal Materials",
+    summary: "Super simple shoes made with one or just a couple of materials — mono-material construction strips the shoe back to essentials: easier production, lower cost, recyclable by design, and an honest minimal aesthetic.",
   },
 ];
 
@@ -794,8 +775,8 @@ const PRODUCTS = [
   },
   {
     id: "dada-rotary-laces",
-    category: "kids-shoe",
-    trend: "charm",
+    category: "shoe",
+    trend: "toyfication",
     brand: "DaDa 嗒嗒",
     name: "Rotary-Dial Shoelaces with Charm Buckles",
     features: [
@@ -894,7 +875,7 @@ const PRODUCTS = [
   },
     {
     id: "2am-4d-printed-sneakers",
-    category: "footwear",
+    category: "shoe",
     trend: "4d-printing",
     brand: "2AM",
     name: "4D-Printed Sneakers — Thug & Hybrid",
@@ -914,8 +895,8 @@ const PRODUCTS = [
   },
     {
     id: "teddy-fleece-slip-on",
-    category: "footwear",
-    trend: "cozy-materials",
+    category: "shoe",
+    trend: "minimal-materials",
     brand: "BRAND TBC",
     name: "Teddy Fleece Slip-On Shoes",
     features: [
@@ -930,8 +911,8 @@ const PRODUCTS = [
   },
   {
     id: "eva-fleece-clogs",
-    category: "footwear",
-    trend: "cozy-materials",
+    category: "shoe",
+    trend: "one-piece-eva",
     brand: "BRAND TBC",
     name: "Fleece-Lined Molded EVA Clogs",
     features: [
@@ -947,8 +928,8 @@ const PRODUCTS = [
   },
     {
     id: "five-toe-barefoot-collection",
-    category: "footwear",
-    trend: "five-toe-barefoot",
+    category: "shoe",
+    trend: "minimal-materials",
     brand: "BRAND TBC",
     name: "Five-Toe Barefoot Collection",
     features: [
@@ -965,8 +946,8 @@ const PRODUCTS = [
   },
     {
     id: "gallonshark-five-toe",
-    category: "footwear",
-    trend: "five-toe-barefoot",
+    category: "shoe",
+    trend: "minimal-materials",
     brand: "GallonShark",
     name: "Five-Toe Barefoot Shoes — Sock & Slip-On",
     features: [
@@ -980,7 +961,7 @@ const PRODUCTS = [
   },
             {
     id: "uppervoid-marbled-eva",
-    category: "footwear",
+    category: "shoe",
     trend: "one-piece-eva",
     brand: "UPPERVOID",
     name: "Marbled EVA Platform — Knit Sock & Padded Puffer",
@@ -998,7 +979,7 @@ const PRODUCTS = [
   },
     {
     id: "native-jefferson",
-    category: "footwear",
+    category: "shoe",
     trend: "one-piece-eva",
     brand: "NATIVE",
     name: "Jefferson — One-Piece EVA with Statement Finishes",
@@ -1015,8 +996,8 @@ const PRODUCTS = [
   },
   {
     id: "taranis-eva-clogs",
-    category: "kids-shoe",
-    trend: "water-ready-eva",
+    category: "shoe",
+    trend: "one-piece-eva",
     brand: "TARANIS 泰兰尼斯",
     name: "Crocs-Style EVA Clogs with Rubber Outsole",
     features: [
@@ -1031,8 +1012,8 @@ const PRODUCTS = [
   },
   {
     id: "crocs-lego-clogs",
-    category: "kids-shoe",
-    trend: "ip-collab-play",
+    category: "shoe",
+    trend: "toyfication",
     brand: "Crocs × LEGO",
     name: "LEGO Brick Clogs (Kids)",
     features: [
@@ -1049,7 +1030,7 @@ const PRODUCTS = [
   },
   {
     id: "chedoir-glow-shark-slides",
-    category: "footwear",
+    category: "shoe",
     trend: "one-piece-eva",
     brand: "CHEDOIR",
     name: "Glow-in-the-Dark Shark Slides",
