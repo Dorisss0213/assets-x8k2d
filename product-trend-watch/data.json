@@ -85,19 +85,19 @@
       "id": "sleep-aid",
       "category": "home-textile",
       "name": "Sleep Aid",
-      "summary": "A whole brand built around one idea — deep sleep. Bedding engineered for temperature control (quilt) and body support (pillow, sheet), plus portable sleep-aid accessories: every product, detail and package starts from deep sleep, turning bedding from a category buy into a system you trust and re-buy."
+      "summary": "Bedding and bedtime accessories — supportive pillows, stay-put sheets, temperature-regulating quilts, waist belts, eye masks and sleep hoods."
     },
     {
       "id": "disruptive-format-snacking",
       "category": "snacking",
       "name": "Disruptive Format",
-      "summary": "Everyday formats re-engineered into something new — freeze-dried topping blocks, cold-water noodles — innovation you can see, feel and taste."
+      "summary": "One-block meal toppers — freeze-dried meat, egg and vegetables for instant noodles."
     },
     {
       "id": "new-concept",
       "category": "snacking",
       "name": "New Concept",
-      "summary": "Instant foods that skip the heat — no hot water or microwave needed. Novel cold-prep tech and summer-friendly positioning turn convenience into the innovation story."
+      "summary": "Cold-prep instant food — cup noodles ready in five minutes with cold water."
     },
     {
       "id": "one-piece-eva",
@@ -138,8 +138,8 @@
       "brand": "BABYPANTRY 光合星球",
       "name": "Puzzle Cookies with Calcium, Iron & Zinc",
       "features": [
-        "Cookie pieces slot together into <strong>5 different 3D dinosaurs</strong> — kids build before they eat",
-        "Fortified with <strong>calcium, iron &amp; zinc</strong> — play value on top of a nutrition claim"
+        "<strong><mark style=\"background:var(--red-soft);color:inherit;border-radius:3px;padding:0 .2em\">Buildable dinosaur cookies</mark></strong> — slot pieces together into five 3D designs",
+        "<strong>Fortified recipe</strong> — added calcium, iron and zinc"
       ],
       "sales": "300k+ sold <span class=\"hedge\">(listing claim)</span>",
       "media": [
@@ -151,7 +151,7 @@
         {
           "type": "video",
           "src": "https://fastly.jsdelivr.net/gh/dorisss0213/beauty-innovation-media@main/product-trend-watch/media/babypantry-dino-cookies.mp4",
-          "poster": "https://fastly.jsdelivr.net/gh/dorisss0213/beauty-innovation-media@main/product-trend-watch/media-webp/babypantry-dino-cookies-dinosaurs.webp"
+          "poster": "https://fastly.jsdelivr.net/gh/dorisss0213/beauty-innovation-media@main/product-trend-watch/media-webp/babypantry-dino-cookies-preview.webp"
         },
         {
           "type": "image",
@@ -167,8 +167,8 @@
       "brand": "BABYPANTRY 光合星球",
       "name": "Daily Nutrition Mini Cookies",
       "features": [
-        "Colorful soft cookies, each piece stamped with its nutrient (Ca / DHA / GOS / Lut) — <strong>one pack a day</strong> positioning",
-        "Calcium, iron, zinc + vitamins, algae-oil DHA, dual prebiotics, lutein — <strong>dosage logic borrowed from supplements, not snacks</strong>"
+        "<strong><mark style=\"background:var(--red-soft);color:inherit;border-radius:3px;padding:0 .2em\">One-pack-a-day format</mark></strong> — colourful soft cookies stamped with nutrients",
+        "<strong>Nutrient mix</strong> — calcium, iron, zinc, DHA, lutein and two prebiotics"
       ],
       "sales": "50k+ sold <span class=\"hedge\">(listing claim)</span>",
       "media": [
@@ -191,15 +191,16 @@
       "brand": "BABYPANTRY 光合星球",
       "name": "Calcium, Iron & Zinc Soft Cookies",
       "features": [
-        "Soft cookies in <strong>cute colourful shapes</strong> — stars, hearts, fruit silhouettes",
-        "Fortified with <strong>calcium, iron &amp; zinc</strong>; entry-price traffic product with heavy promo"
+        "<strong><mark style=\"background:var(--red-soft);color:inherit;border-radius:3px;padding:0 .2em\">Colourful soft cookies</mark></strong> — stars, hearts and other playful shapes",
+        "<strong>Fortified recipe</strong> — added calcium, iron and zinc"
       ],
       "sales": "100k+ sold <span class=\"hedge\">(listing claim)</span>",
       "media": [
         {
           "type": "image",
           "src": "https://fastly.jsdelivr.net/gh/dorisss0213/beauty-innovation-media@main/product-trend-watch/media-webp/babypantry-calcium-fe-zn-soft-cookies-listing.webp",
-          "alt": "Tmall listing"
+          "alt": "Colourful BabyPantry soft cookies in star and heart shapes",
+          "pos": "50% 0%"
         }
       ]
     },
@@ -210,9 +211,8 @@
       "brand": "BRAND TBC",
       "name": "Mushroom Fruit Melts",
       "features": [
-        "<strong>Mushroom-shaped</strong> melts in fruit colours &amp; flavours — strawberry, peach, dragon fruit, blueberry",
-        "Made with <strong>real fruit purée</strong>, colour visibly matched to the source fruit",
-        "<strong>~2.2× the calcium of milk</strong>, added probiotics, no added sugar / colourant / preservative"
+        "<strong><mark style=\"background:var(--red-soft);color:inherit;border-radius:3px;padding:0 .2em\">Mushroom-shaped melts</mark></strong> — strawberry, peach, dragon fruit and blueberry",
+        "<strong>Made with fruit purée</strong> — added probiotics (listing claim)"
       ],
       "media": [
         {
@@ -234,15 +234,16 @@
       "brand": "BABYPANTRY 光合星球",
       "name": "Hawthorn Mini Cones",
       "features": [
-        "Tiny <strong>ice-cream-cone shapes</strong> — a familiar treat format turned kids' functional snack",
-        "<strong>5-ingredient digestion formula</strong>: hawthorn, chicken gizzard lining, yam, prebiotics &amp; fibre"
+        "<strong><mark style=\"background:var(--red-soft);color:inherit;border-radius:3px;padding:0 .2em\">Ice-cream-cone shape</mark></strong> — hawthorn snack on a stick",
+        "<strong>Five featured ingredients</strong> — hawthorn, yam, chicken gizzard lining, prebiotics and fibre"
       ],
       "sales": "50k+ sold <span class=\"hedge\">(listing claim)</span>",
       "media": [
         {
           "type": "image",
           "src": "https://fastly.jsdelivr.net/gh/dorisss0213/beauty-innovation-media@main/product-trend-watch/media-webp/babypantry-hawthorn-mini-cones-listing.webp",
-          "alt": "Tmall listing"
+          "alt": "Hawthorn snacks shaped like ice cream cones on sticks",
+          "pos": "50% 0%"
         }
       ]
     },
@@ -253,20 +254,20 @@
       "brand": "BABYPANTRY 光合星球",
       "name": "Flavored Drink Straws",
       "features": [
-        "Straws that <strong>flavour milk or water as you sip</strong> — the fun of drinking built into the utensil",
-        "Options map to benefit, not flavour: hawthorn for digestion, pineapple for eye health"
+        "<strong><mark style=\"background:var(--red-soft);color:inherit;border-radius:3px;padding:0 .2em\">Flavour-filled straw</mark></strong> — flavours milk or water as you sip",
+        "<strong>Flavour options</strong> — hawthorn and pineapple"
       ],
       "sales": "10k+ sold <span class=\"hedge\">(listing claim)</span>",
       "media": [
         {
+          "type": "video",
+          "src": "https://fastly.jsdelivr.net/gh/dorisss0213/beauty-innovation-media@main/product-trend-watch/media/babypantry-flavored-drink-straws.mp4",
+          "poster": "https://fastly.jsdelivr.net/gh/dorisss0213/beauty-innovation-media@main/product-trend-watch/media-webp/babypantry-flavored-drink-straws-preview.webp"
+        },
+        {
           "type": "image",
           "src": "https://fastly.jsdelivr.net/gh/dorisss0213/beauty-innovation-media@main/product-trend-watch/media-webp/babypantry-flavored-drink-straws-listing.webp",
           "alt": "Tmall listing"
-        },
-        {
-          "type": "video",
-          "src": "https://fastly.jsdelivr.net/gh/dorisss0213/beauty-innovation-media@main/product-trend-watch/media/babypantry-flavored-drink-straws.mp4",
-          "poster": "https://fastly.jsdelivr.net/gh/dorisss0213/beauty-innovation-media@main/product-trend-watch/media-webp/babypantry-flavored-drink-straws-listing.webp"
         }
       ]
     },
@@ -655,16 +656,16 @@
       "brand": "水獭吨吨 (Shuita Tundun)",
       "name": "Freeze-Dried Tea Blocks",
       "features": [
-        "<strong>Freeze-drying catches on in tea &amp; drinks</strong> — unsweetened freeze-dried tea blocks (Longjing, Oolong, Jasmine) dissolve in cold or hot water in seconds, real-brew taste with zero brewing",
-        "<strong>Fruit-tea blocks too</strong> — tea plus real fruit freeze-dried into one block, a fruit tea in one pour; part of the same freeze-dried wave as SO ACAI's Brazilian açaí powder in supplements",
-        "<strong>Gifting &amp; collectible angle</strong> — colourful lineup boxes with gift add-ons (glass cup, tumbler) and top-seller status during Double 11 subsidies"
+        "<strong><mark style=\"background:var(--red-soft);color:inherit;border-radius:3px;padding:0 .2em\">Instant tea blocks</mark></strong> — dissolve in hot or cold water",
+        "<strong>Unsweetened tea</strong> — Longjing, oolong and jasmine",
+        "<strong>Real fruit and tea</strong> — freeze-dried together in fruit-tea blocks"
       ],
       "sales": "6,000+ sold (single Tmall link) <span class=\"hedge\">(Double 11, subsidy price ¥29.8+)</span>",
       "media": [
         {
           "type": "video",
           "src": "https://fastly.jsdelivr.net/gh/dorisss0213/beauty-innovation-media@main/product-trend-watch/media/shuita-tundun-freeze-dried-tea.mp4",
-          "poster": "https://fastly.jsdelivr.net/gh/dorisss0213/beauty-innovation-media@main/product-trend-watch/media-webp/shuita-tundun-freeze-dried-tea-poster.webp"
+          "poster": "https://fastly.jsdelivr.net/gh/dorisss0213/beauty-innovation-media@main/product-trend-watch/media-webp/shuita-tundun-freeze-dried-tea-preview.webp"
         },
         {
           "type": "image",
@@ -680,9 +681,9 @@
       "brand": "REGENERATE",
       "name": "Foaming Mouthwash",
       "features": [
-        "<strong>Pump foam, no rinsing cup needed</strong> — easy to control the dose and spit the foam straight into a napkin; ultra-portable for on-the-go use",
-        "<strong>Mild formula</strong> — 0% alcohol, non-stinging; rich mousse foam fills the mouth for a deeper clean, freshens breath and helps protect enamel",
-        "<strong>Small bottle, big mileage</strong> — one compact bottle delivers as many uses as a 500ml liquid mouthwash"
+        "<strong><mark style=\"background:var(--red-soft);color:inherit;border-radius:3px;padding:0 .2em\">Pump-dispensed foam</mark></strong> — controlled dose, no rinse cup needed",
+        "<strong>Alcohol-free mousse</strong> — mild formula",
+        "<strong>Compact pump</strong> — as many uses as 500 mL of liquid mouthwash (brand claim)"
       ],
       "media": [
         {
@@ -709,14 +710,13 @@
       "brand": "Gfloss",
       "name": "Hands-Free Dental Floss",
       "features": [
-        "<strong>Floss you use with your tongue and lips</strong> — no handle to hold: the floss sits in the mouth and is guided by the tongue, so you can floss anywhere, any circumstance, hands-free",
-        "<strong>Already sold in the US</strong> — a niche but real product on the market; worth a look for how far the 'disruptive format' logic can be pushed"
+        "<strong><mark style=\"background:var(--red-soft);color:inherit;border-radius:3px;padding:0 .2em\">In-mouth floss tool</mark></strong> — guided by the tongue and lips"
       ],
       "media": [
         {
           "type": "video",
           "src": "https://fastly.jsdelivr.net/gh/dorisss0213/beauty-innovation-media@main/product-trend-watch/media/gfloss-hands-free.mp4",
-          "poster": "https://fastly.jsdelivr.net/gh/dorisss0213/beauty-innovation-media@main/product-trend-watch/media-webp/gfloss-hands-free-poster.webp"
+          "poster": "https://fastly.jsdelivr.net/gh/dorisss0213/beauty-innovation-media@main/product-trend-watch/media-webp/gfloss-hands-free-preview.webp"
         }
       ]
     },
@@ -727,16 +727,16 @@
       "brand": "永璞 Yongpu",
       "name": "5D Aroma-Lock Freeze-Dried Coffee Blocks",
       "features": [
-        "<strong>5D aroma-lock freeze-dry tech</strong> — skips the grinding step with \"fill first, freeze-dry after\": whole coffee blocks (not powder) that lock temperature, flavour, aroma, form &amp; freshness, built on the SCA gold-cup extraction standard",
-        "<strong>Single-origin beans, hot &amp; cold instant</strong> — Ethiopia / Kenya / Yunnan SOE plus a global espresso blend; dissolves in seconds hot or cold, and the original little-cup format keeps freshness for 24 months",
-        "<strong>From convenience to quality</strong> — launched July 2025, moving freeze-dried coffee beyond 'portable' to 'tastes like freshly extracted': the industry's 3.0 era, and a playbook for premium instant coffee"
+        "<strong><mark style=\"background:var(--red-soft);color:inherit;border-radius:3px;padding:0 .2em\">Whole coffee blocks</mark></strong> — dissolve in hot or cold water",
+        "<strong>Freeze-dried in mini cups</strong> — coffee portioned before drying",
+        "<strong>Single origins and blends</strong> — Ethiopia, Kenya and Yunnan, plus an espresso blend"
       ],
       "sales": "20k+ reviews on JD, 5k+ monthly <span class=\"hedge\">(Tmall superstore)</span>",
       "media": [
         {
           "type": "video",
           "src": "https://fastly.jsdelivr.net/gh/dorisss0213/beauty-innovation-media@main/product-trend-watch/media/yongpu-5d-freeze-dried-coffee.mp4",
-          "poster": "https://fastly.jsdelivr.net/gh/dorisss0213/beauty-innovation-media@main/product-trend-watch/media-webp/yongpu-5d-freeze-dried-coffee-poster.webp"
+          "poster": "https://fastly.jsdelivr.net/gh/dorisss0213/beauty-innovation-media@main/product-trend-watch/media-webp/yongpu-5d-freeze-dried-coffee-preview.webp"
         }
       ]
     },
@@ -927,11 +927,10 @@
       "category": "snacking",
       "trend": "disruptive-format-snacking",
       "brand": "拉面说 (Ramen Talk)",
-      "name": "Freeze-Dried High-Protein Veggie Block",
+      "name": "Instant Ramen with a Freeze-Dried Topping Block",
       "features": [
-        "<strong>Protein made visual</strong> — one big freeze-dried block packed with real toppings (thin-cut beef, scrambled egg, tomato, mushrooms &amp; more, 40g+ per pack): you can see the protein before you even add water",
-        "<strong>Add-in for instant noodles</strong> — drops into the cup and rehydrates like a freshly cooked topping (“like stir-fried at home”), turning a quick noodle into a proper meal",
-        "<strong>Positioned as a high-protein instant noodle</strong> — 'a new height for instant noodles' built around the oversized topping block, a more visual way to highlight protein than a number on the front"
+        "<strong><mark style=\"background:var(--red-soft);color:inherit;border-radius:3px;padding:0 .2em\">Freeze-dried topping block</mark></strong> — beef, scrambled egg, tomato and mushrooms in one block",
+        "<strong>40 g+ topping pack</strong> — rehydrates in the noodle cup (listing claim)"
       ],
       "media": [
         {
@@ -942,7 +941,7 @@
         {
           "type": "image",
           "src": "https://fastly.jsdelivr.net/gh/dorisss0213/beauty-innovation-media@main/product-trend-watch/media-webp/ramen-talk-ingredients.webp",
-          "alt": "Ingredient grid — 40g+ toppings per pack"
+          "alt": "Ingredient grid with a listing claim of 40 g or more per topping pack"
         }
       ]
     },
@@ -953,9 +952,8 @@
       "brand": "Nissin 日清",
       "name": "Cold-Water Cup Noodles",
       "features": [
-        "<strong>Just add cold water, wait 5 minutes</strong> — no hot water or microwave needed; Nissin's patented “Cold Rehydrate” tech softens the noodles even in cold water while keeping a firm, smooth texture (heat-shield lid keeps them from going mushy)",
-        "<strong>A cold option for summer</strong> — two flavours: Chicken Salt &amp; Lemon and Spicy Kimchi, positioned as “a summer snack that fills you up”; a first-in-history cold-water cup noodle, sold in 6-cup boxes on Amazon Japan",
-        "<strong>Honest caveat</strong> — still made with fried noodles, roughly the same calories gram for gram as regular Cup Noodles; it's mainly about convenience, not health; got attention in Chinese social-media taste tests after its July/August launch"
+        "<strong><mark style=\"background:var(--red-soft);color:inherit;border-radius:3px;padding:0 .2em\">Cold-water prep</mark></strong> — add cold water and wait five minutes",
+        "<strong>Two flavours</strong> — Chicken Salt &amp; Lemon and Spicy Kimchi"
       ],
       "media": [
         {
@@ -972,12 +970,17 @@
       "brand": "Atour Planet (亚朵星球)",
       "name": "Deep Sleep Pillow Pro 4.0",
       "features": [
-        "<strong>Dynamic cushioning that follows your body</strong> — AgileSupport® three-layer structure (hug foam / air-cell foam / anti-pressure foam) plus R-6 internal zones precision-mapped to head, shoulder and neck, adapting as you change sleeping positions — “a good pillow moves with your body”",
-        "<strong>Interactive unboxing reinforces the product story</strong> — the innovative cylindrical pack's top rebounds when pressed, so you feel the pillow's cushioning and resilience before you even open it (“unboxing feels like a deep breath”)",
-        "<strong>One idea everywhere: deep sleep</strong> — every product, packaging detail and ad in the Atour Planet line starts from deep sleep, a whole brand built around a single concept"
+        "<strong><mark style=\"background:var(--red-soft);color:inherit;border-radius:3px;padding:0 .2em\">Zoned pillow support</mark></strong> — R-6 contours for the head, neck and shoulders",
+        "<strong>Three-layer foam</strong> — AgileSupport® cushioning adapts as you shift",
+        "<strong>Twist-open tube</strong> — tear-open inner wrap"
       ],
-      "sales": "12M+ units sold since 2023, No.1 on Tmall <span class=\"hedge\">(~RMB 400/pillow, ~RMB 4.8B cumulative)</span>",
+      "sales": "12M+ sold across the Deep Sleep Pillow Pro series <span class=\"hedge\">(Atour, Q2 2026)</span>",
       "media": [
+        {
+          "type": "image",
+          "src": "https://fastly.jsdelivr.net/gh/dorisss0213/beauty-innovation-media@main/product-trend-watch/media-webp/atour-pillow-r6-zones.webp",
+          "alt": "R-6 internal zones — head, shoulder & neck mapping"
+        },
         {
           "type": "image",
           "src": "https://fastly.jsdelivr.net/gh/dorisss0213/beauty-innovation-media@main/product-trend-watch/media-webp/atour-pillow-hero.webp",
@@ -990,15 +993,14 @@
         },
         {
           "type": "image",
-          "src": "https://fastly.jsdelivr.net/gh/dorisss0213/beauty-innovation-media@main/product-trend-watch/media-webp/atour-pillow-r6-zones.webp",
-          "alt": "R-6 internal zones — head, shoulder & neck mapping"
-        },
-        {
-          "type": "image",
           "src": "https://fastly.jsdelivr.net/gh/dorisss0213/beauty-innovation-media@main/product-trend-watch/media-webp/atour-pillow-packaging.webp",
-          "alt": "Cylindrical pack — rebound unboxing experience"
+          "alt": "Twist-open tube and tear-open inner wrap"
         }
-      ]
+      ],
+      "source": {
+        "label": "Atour Q2 2026 earnings call",
+        "url": "https://ir.yaduo.com/static-files/d145de1f-37ef-422e-8e16-c48df422d688#page=4"
+      }
     },
     {
       "id": "atour-deep-sleep-fitted-sheet",
@@ -1007,15 +1009,16 @@
       "brand": "Atour Planet (亚朵星球)",
       "name": "Deep Sleep Fitted Sheet 2.0",
       "features": [
-        "<strong>Zoned stretch &amp; structure</strong> — HexaSoftAir® skin-touch bed surface sits flat; elastic long sides wrap the mattress while woven short edges hold their shape — hugs the mattress, stays in place, reduces creasing",
-        "<strong>Thoughtful details</strong> — contrast-coloured inner short edge so you find the orientation at a glance; corners align in one pull (logo below the mattress waterline), stays put through tossing — no re-tucking after waking up",
-        "<strong>Easy to store</strong> — folds up easily and packs away without creasing"
+        "<strong><mark style=\"background:var(--red-soft);color:inherit;border-radius:3px;padding:0 .2em\">Stay-put fit</mark></strong> — elastic long sides and reinforced woven short ends",
+        "<strong>HexaSoftAir® fabric</strong> — soft sleeping surface that lies flat",
+        "<strong>Contrast trim</strong> — marks the short end for easier fitting"
       ],
       "media": [
         {
           "type": "image",
           "src": "https://fastly.jsdelivr.net/gh/dorisss0213/beauty-innovation-media@main/product-trend-watch/media-webp/atour-sheet-hexasoftair.webp",
-          "alt": "HexaSoftAir® surface + reinforced / elastic sides"
+          "alt": "HexaSoftAir® surface + reinforced / elastic sides",
+          "pos": "50% 64%"
         },
         {
           "type": "image",
@@ -1031,19 +1034,20 @@
       "brand": "Atour Planet (亚朵星球)",
       "name": "Deep Sleep Summer Quilt Pro 3.0",
       "features": [
-        "<strong>Sleep promoted through temperature control</strong> — the quilt's core mechanism is keeping the sleep microclimate in the ideal zone: Drybreezer® three-layer construction with DynamicOxy® chips regulating temperature two-way, so you're neither too hot nor too cold and stay in deep sleep longer",
-        "<strong>Full-series temperature lineup</strong> — beyond the Summer Pro 3.0, the line also has <strong>Deep Sleep Quilt · Winter Pro 2.0</strong> (dual-layer cold-block + moisture-wick, warmth ≈ an 800-fill-power down quilt) and <strong>Deep Sleep Quilt · All-Season Pro 2.0</strong> (top layer stores heat, bottom layer wicks sweat, 9m interlocking zipper) — one control-temperature story across the year"
+        "<strong><mark style=\"background:var(--red-soft);color:inherit;border-radius:3px;padding:0 .2em\">Temperature-regulating layers</mark></strong> — Drybreezer® construction with a DynamicOxy® middle layer",
+        "<strong>Dry-touch lining</strong> — CloudyCaress® fabric next to skin",
+        "<strong>Easy storage</strong> — hang or fold between seasons"
       ],
       "media": [
         {
           "type": "image",
-          "src": "https://fastly.jsdelivr.net/gh/dorisss0213/beauty-innovation-media@main/product-trend-watch/media-webp/atour-quilt-hero.webp",
-          "alt": "Summer quilt hero — cool all night"
+          "src": "https://fastly.jsdelivr.net/gh/dorisss0213/beauty-innovation-media@main/product-trend-watch/media-webp/atour-quilt-drybreezer.webp",
+          "alt": "Drybreezer® 3-layer temperature system"
         },
         {
           "type": "image",
-          "src": "https://fastly.jsdelivr.net/gh/dorisss0213/beauty-innovation-media@main/product-trend-watch/media-webp/atour-quilt-drybreezer.webp",
-          "alt": "Drybreezer® 3-layer temperature system"
+          "src": "https://fastly.jsdelivr.net/gh/dorisss0213/beauty-innovation-media@main/product-trend-watch/media-webp/atour-quilt-hero.webp",
+          "alt": "Summer quilt hero — cool all night"
         },
         {
           "type": "image",
@@ -1531,8 +1535,8 @@
       "brand": "ACK 艾斯凯",
       "name": "Padded Sleep Belt — Waist Gap Support",
       "features": [
-        "<strong><mark style=\"background:var(--red-soft);color:inherit;border-radius:3px;padding:0 .2em\">Waist-gap support</mark></strong> — soft padding between the waist and mattress",
-        "<strong>Zoned padding</strong> — back, sides and abdomen for back and side sleepers"
+        "<strong><mark style=\"background:var(--red-soft);color:inherit;border-radius:3px;padding:0 .2em\">Fills the gap under the waist</mark></strong> — padded belt for back and side sleepers",
+        "<strong>Zoned padding</strong> — back, sides and abdomen"
       ],
       "sales": "10,000+ sold <span class=\"hedge\">(listing claim)</span>",
       "media": [
@@ -1555,10 +1559,10 @@
       "brand": "MDOG 米度狗 · BRAND TBC",
       "name": "Weighted Sleep Mask × Aromatherapy (重力助眠眼罩)",
       "features": [
-        "<strong><mark style=\"background:var(--red-soft);color:inherit;border-radius:3px;padding:0 .2em\">Weighted mask + swappable inserts</mark></strong> — botanical pouch or steam pocket, depending on the version",
+        "<strong><mark style=\"background:var(--red-soft);color:inherit;border-radius:3px;padding:0 .2em\">Weighted mask with swappable inserts</mark></strong> — botanical pouch or steam pocket, depending on the version",
         "<strong>MDOG botanical pouch</strong> — two dried-herb blends",
-        "<strong>Steam-pocket version</strong> — about 45°C for up to 45 min (listing claim), plus neck-wrap use",
-        "<strong>Dual-sided fabric</strong> — cool silk-touch and warm fleece"
+        "<strong>Steam-pocket version</strong> — about 45°C and up to 45 min of warmth (listing claim), plus neck-wrap use",
+        "<strong>Two fabric sides</strong> — cool silk-touch and warm fleece on the steam-pocket version"
       ],
       "sales": "3,000+ sold <span class=\"hedge\">(BRAND TBC, listing claim)</span>",
       "media": [
@@ -1575,12 +1579,12 @@
         {
           "type": "image",
           "src": "https://fastly.jsdelivr.net/gh/dorisss0213/beauty-innovation-media@main/product-trend-watch/media-webp/steam-pocket-mask-1.webp",
-          "alt": "Weighted mask with steam-mask pocket"
+          "alt": "Weighted steam-pocket mask and neck-wrap use"
         },
         {
           "type": "image",
           "src": "https://fastly.jsdelivr.net/gh/dorisss0213/beauty-innovation-media@main/product-trend-watch/media-webp/steam-pocket-mask-2.webp",
-          "alt": "Steam insert warmth and neck-wrap use"
+          "alt": "Cool silk-touch side and warm fleece side"
         }
       ]
     },
@@ -1592,7 +1596,7 @@
       "name": "Goodnight Disposable Steam Eye Mask",
       "features": [
         "<strong><mark style=\"background:var(--red-soft);color:inherit;border-radius:3px;padding:0 .2em\">Self-heating steam</mark></strong> — about 30 min of gentle warmth (listing claim)",
-        "<strong>Essential-oil scents</strong> — lavender, tangerine peel and clary sage among the blends"
+        "<strong>Essential-oil blends</strong> — including tangerine peel and lavender"
       ],
       "media": [
         {
@@ -1673,8 +1677,8 @@
       "brand": "蓝盒子 Blue Box",
       "name": "N3 Pillow-in-Pillow — Adjustable Height",
       "features": [
-        "<strong><mark style=\"background:var(--red-soft);color:inherit;border-radius:3px;padding:0 .2em\">Two pillow heights</mark></strong> — 10 or 12 cm",
-        "<strong>Pillow-in-pillow</strong> — contoured memory-foam core inside a plush, washable outer pillow"
+        "<strong><mark style=\"background:var(--red-soft);color:inherit;border-radius:3px;padding:0 .2em\">Adjustable pillow height</mark></strong> — 10 or 12 cm with a removable insert",
+        "<strong>Pillow-in-pillow</strong> — contoured memory foam inside a machine-washable outer pillow"
       ],
       "sales": "20,000+ sold <span class=\"hedge\">(listing claim)</span>",
       "media": [
