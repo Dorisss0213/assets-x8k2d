@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-26",
+  "updated": "2026-11-27",
   "categories": [
     {
       "id": "supplement",
@@ -1661,6 +1661,30 @@
           "type": "image",
           "src": "https://fastly.jsdelivr.net/gh/dorisss0213/beauty-innovation-media@main/product-trend-watch/media-webp/in-mist-mist-supplement-3.webp",
           "alt": "IN MIST waterless one-second vitamin supplementation"
+        }
+      ]
+    },
+    {
+      "id": "bluebox-n3-pillow",
+      "category": "home-textile",
+      "trend": "sleep-aid",
+      "brand": "蓝盒子 Blue Box",
+      "name": "N3 Pillow-in-Pillow — Adjustable Height",
+      "features": [
+        "<strong>Pillow-in-pillow design</strong> — fluffy, machine-washable outer pillow for a soft feel, with a contoured memory-foam core for neck support",
+        "<strong>Adjustable height</strong> — add or remove a thin insert to switch between 10 and 12 cm"
+      ],
+      "sales": "20,000+ sold <span class=\"hedge\">(listing claim)</span>",
+      "media": [
+        {
+          "type": "image",
+          "src": "https://fastly.jsdelivr.net/gh/dorisss0213/beauty-innovation-media@main/product-trend-watch/media-webp/bluebox-n3-pillow-1.webp",
+          "alt": "N3 pillow-in-pillow, height adjustable"
+        },
+        {
+          "type": "video",
+          "src": "https://fastly.jsdelivr.net/gh/dorisss0213/beauty-innovation-media@main/product-trend-watch/media/bluebox-n3-pillow.mp4",
+          "poster": "https://fastly.jsdelivr.net/gh/dorisss0213/beauty-innovation-media@main/product-trend-watch/media-webp/bluebox-n3-pillow-1.webp"
         }
       ]
     }
