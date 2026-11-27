@@ -1059,11 +1059,11 @@
       "brand": "2AM",
       "name": "4D-Printed Sneakers — Thug & Hybrid",
       "features": [
-        "<strong>One-piece 4D print</strong> — upper, lattice midsole and outsole in a single shot. Open honeycomb cage = structure + airflow",
-        "<strong>Hybrid: printed shell + knit bootie</strong> — fixed sock liner inside a snake-texture cage. +5 cm height, quick-lace toggle, no tying",
-        "<strong>Two silhouettes, one platform</strong> — Thug (lace-up look, chunky rim) and Hybrid (sock bootie, black & white)"
+        "<strong><mark style=\"background:var(--red-soft);color:inherit;border-radius:3px;padding:0 .2em\">One-piece 4D print</mark></strong> — upper, open-lattice midsole and outsole printed together",
+        "<strong>Hybrid knit bootie</strong> — +5 cm lift and a quick-lace toggle",
+        "<strong>Thug profile</strong> — chunky rim and lace-up upper"
       ],
-      "sales": "Tmall flagship store ~39.5K followers <span class=\\\"hedge\\\">(Tmall)</span> · Tmall flagship store ~39.5K followers <span class=\\\"hedge\\\">(Tmall)</span>",
+      "sales": "~39.5K Tmall flagship store followers",
       "media": [
         {
           "type": "image",
@@ -1088,7 +1088,7 @@
         {
           "type": "image",
           "src": "https://fastly.jsdelivr.net/gh/dorisss0213/beauty-innovation-media@main/product-trend-watch/media-webp/2am-hybrid-4.webp",
-          "alt": "Hybrid — on feet"
+          "alt": "Pair of 2AM Hybrid sneakers laid out for a full side view"
         }
       ]
     },
@@ -1099,15 +1099,16 @@
       "brand": "BRAND TBC",
       "name": "Teddy Fleece Slip-On Shoes",
       "features": [
-        "<strong>Teddy fleece upper</strong> — plush bouclé all over, slipper-soft feel",
-        "<strong>Honeycomb rubber sole</strong> — grippy enough for indoors and out",
-        "<strong>Easy on/off</strong> — slip-on + velcro strap and heel tab"
+        "<strong><mark style=\"background:var(--red-soft);color:inherit;border-radius:3px;padding:0 .2em\">Teddy fleece upper</mark></strong> — plush bouclé texture",
+        "<strong>Honeycomb rubber outsole</strong> — textured grip",
+        "<strong>Easy on and off</strong> — hook-and-loop strap and heel pull tab"
       ],
       "media": [
         {
           "type": "image",
           "src": "https://fastly.jsdelivr.net/gh/dorisss0213/beauty-innovation-media@main/product-trend-watch/media-webp/teddy-fleece-slip-on-1.webp",
-          "alt": "Teddy fleece upper + honeycomb rubber sole"
+          "alt": "Teddy fleece upper + honeycomb rubber sole",
+          "pos": "28% 50%"
         },
         {
           "type": "image",
@@ -1123,20 +1124,21 @@
       "brand": "BRAND TBC",
       "name": "Fleece-Lined Molded EVA Clogs",
       "features": [
-        "<strong>One-piece molded EVA</strong> — seamless, waterproof, rinse clean. Sculpted wood-grain texture",
-        "<strong>Fleece-lined</strong> — the summer clog turned winter slip-on",
-        "<strong>3 colourways</strong> — black, off-white, khaki"
+        "<strong><mark style=\"background:var(--red-soft);color:inherit;border-radius:3px;padding:0 .2em\">Fleece-lined EVA clog</mark></strong> — plush lining for colder days",
+        "<strong>One-piece moulded shell</strong> — rinse-clean EVA with sculpted wood grain",
+        "<strong>Three colours</strong> — black, off-white and khaki"
       ],
       "media": [
         {
           "type": "image",
-          "src": "https://fastly.jsdelivr.net/gh/dorisss0213/beauty-innovation-media@main/product-trend-watch/media-webp/eva-fleece-clogs-1.webp",
-          "alt": "On-foot look with fleece lining"
+          "src": "https://fastly.jsdelivr.net/gh/dorisss0213/beauty-innovation-media@main/product-trend-watch/media-webp/eva-fleece-clogs-2.webp",
+          "alt": "Fleece lining and ribbed EVA shell, in hand and on foot",
+          "pos": "38% 50%"
         },
         {
           "type": "image",
-          "src": "https://fastly.jsdelivr.net/gh/dorisss0213/beauty-innovation-media@main/product-trend-watch/media-webp/eva-fleece-clogs-2.webp",
-          "alt": "Detail view"
+          "src": "https://fastly.jsdelivr.net/gh/dorisss0213/beauty-innovation-media@main/product-trend-watch/media-webp/eva-fleece-clogs-1.webp",
+          "alt": "On-foot look with fleece lining"
         },
         {
           "type": "image",
@@ -1152,9 +1154,8 @@
       "brand": "BRAND TBC",
       "name": "Five-Toe Barefoot Collection",
       "features": [
-        "<strong>4 silhouettes, one barefoot idea</strong> — strappy ballet flat, graphic wrap-strap, mesh sandal, high-cut bootie",
-        "<strong>Barefoot-thin stacks</strong> — 2 mm insole + 3 mm rubber; sandal steps up to 3.7 mm MEGAGRIP + 3DCOCOON",
-        "<strong>Fashion over function</strong> — polyester, graphic textile, mesh, microfiber/neoprene uppers"
+        "<strong><mark style=\"background:var(--red-soft);color:inherit;border-radius:3px;padding:0 .2em\">Individual toe pockets</mark></strong> — four silhouettes, from a strappy flat to a high-cut bootie",
+        "<strong>Mesh sandal sole</strong> — 3.7 mm MEGAGRIP and 3DCOCOON"
       ],
       "media": [
         {
@@ -1186,14 +1187,15 @@
       "brand": "GallonShark",
       "name": "Five-Toe Barefoot Shoes — Sock & Slip-On",
       "features": [
-        "<strong>Two cuts</strong> — second-skin knit sock, or low-cut slip-on for easy on/off",
-        "<strong>Thin rubber outsole</strong> — flexes with the foot, true barefoot feel"
+        "<strong><mark style=\"background:var(--red-soft);color:inherit;border-radius:3px;padding:0 .2em\">Five-toe knit upper</mark></strong> — sock-style fit or low-cut slip-on",
+        "<strong>Thin rubber outsole</strong> — flexes with the foot"
       ],
       "media": [
         {
           "type": "image",
           "src": "https://fastly.jsdelivr.net/gh/dorisss0213/beauty-innovation-media@main/product-trend-watch/media-webp/gallonshark-knit-sock-shoe-1.webp",
-          "alt": "Knit five-toe sock shoe"
+          "alt": "Knit five-toe sock shoe",
+          "pos": "40% 50%"
         },
         {
           "type": "image",
@@ -1209,9 +1211,9 @@
       "brand": "UPPERVOID",
       "name": "Marbled EVA Platform — Knit Sock & Padded Puffer",
       "features": [
-        "<strong>One marbled EVA platform</strong> — sculpted one-piece sole with a swirl finish, two seasonal uppers",
-        "<strong>Knit Sock</strong> — breathable one-piece knit, sock-like fit on the chunky sole",
-        "<strong>Padded Puffer</strong> — quilted upper, warm and inflated"
+        "<strong><mark style=\"background:var(--red-soft);color:inherit;border-radius:3px;padding:0 .2em\">Sculpted marbled EVA sole</mark></strong> — one platform across both uppers",
+        "<strong>Knit sock</strong> — breathable one-piece knit",
+        "<strong>Padded puffer</strong> — quilted upper with a rounded profile"
       ],
       "media": [
         {
@@ -1243,11 +1245,16 @@
       "brand": "NATIVE",
       "name": "Jefferson — One-Piece EVA with Statement Finishes",
       "features": [
-        "<strong>One-piece EVA</strong> — the classic Jefferson: light, waterproof, washable",
-        "<strong>Finishes do the talking</strong> — Bio-Bling™ glitter gradients, Polka Dogs print, colour fades"
+        "<strong><mark style=\"background:var(--red-soft);color:inherit;border-radius:3px;padding:0 .2em\">Glitter gradients and prints</mark></strong> — Bio-Bling™ colour fades and Polka Dogs print",
+        "<strong>One-piece EVA</strong> — lightweight, waterproof and washable"
       ],
       "sales": "8,871 reviews on Jefferson Print <span class=\"hedge\">(brand site)</span>",
       "media": [
+        {
+          "type": "image",
+          "src": "https://fastly.jsdelivr.net/gh/dorisss0213/beauty-innovation-media@main/product-trend-watch/media-webp/native-jefferson-3.webp",
+          "alt": "Pink-to-purple glitter gradient on a pair of Jefferson clogs"
+        },
         {
           "type": "image",
           "src": "https://fastly.jsdelivr.net/gh/dorisss0213/beauty-innovation-media@main/product-trend-watch/media-webp/native-jefferson-1.webp",
@@ -1257,11 +1264,6 @@
           "type": "image",
           "src": "https://fastly.jsdelivr.net/gh/dorisss0213/beauty-innovation-media@main/product-trend-watch/media-webp/native-jefferson-2.webp",
           "alt": "Jefferson Print — Polka Dogs"
-        },
-        {
-          "type": "image",
-          "src": "https://fastly.jsdelivr.net/gh/dorisss0213/beauty-innovation-media@main/product-trend-watch/media-webp/native-jefferson-3.webp",
-          "alt": "On-foot gradient glitter look"
         }
       ]
     },
@@ -1331,24 +1333,24 @@
       "brand": "TARANIS 泰兰尼斯",
       "name": "Crocs-Style EVA Clogs with Rubber Outsole",
       "features": [
-        "<strong>Molded EVA + cutout vents</strong> — ultra-light, drains and breathes",
-        "<strong>Rubber pods for wet grip</strong> — gear-textured outsole, stream-ready"
+        "<strong><mark style=\"background:var(--red-soft);color:inherit;border-radius:3px;padding:0 .2em\">Rubber grip pods</mark></strong> — textured outsole for wet surfaces",
+        "<strong>Vented EVA shell</strong> — lightweight with cutouts for airflow and drainage"
       ],
       "media": [
         {
           "type": "image",
+          "src": "https://fastly.jsdelivr.net/gh/dorisss0213/beauty-innovation-media@main/product-trend-watch/media-webp/taranis-eva-clogs-3.webp",
+          "alt": "TARANIS outsole with textured rubber grip pods"
+        },
+        {
+          "type": "image",
           "src": "https://fastly.jsdelivr.net/gh/dorisss0213/beauty-innovation-media@main/product-trend-watch/media-webp/taranis-eva-clogs-1.webp",
-          "alt": "TARANIS EVA clogs in 4 colourways by the stream"
+          "alt": "TARANIS EVA clogs in assorted colours beside a stream"
         },
         {
           "type": "image",
           "src": "https://fastly.jsdelivr.net/gh/dorisss0213/beauty-innovation-media@main/product-trend-watch/media-webp/taranis-eva-clogs-2.webp",
           "alt": "Cutout vents and toggle laces detail"
-        },
-        {
-          "type": "image",
-          "src": "https://fastly.jsdelivr.net/gh/dorisss0213/beauty-innovation-media@main/product-trend-watch/media-webp/taranis-eva-clogs-3.webp",
-          "alt": "Anti-slip rubber outsole"
         }
       ]
     },
@@ -1359,9 +1361,9 @@
       "brand": "Crocs × LEGO",
       "name": "LEGO Brick Clogs (Kids)",
       "features": [
-        "<strong>LEGO studs around the sole</strong> — contrasting brick blocks, the clog turned toy",
-        "<strong>Charms included</strong> — flower, bee and brick clips for DIY styling",
-        "<strong>3 colourways</strong> — black, white, toffee pink, all with multi-colour soles"
+        "<strong><mark style=\"background:var(--red-soft);color:inherit;border-radius:3px;padding:0 .2em\">LEGO studs around the sole</mark></strong> — multicolour brick detailing",
+        "<strong>Mix-and-match charms</strong> — flower and bee styling options",
+        "<strong>Three colours</strong> — black, white and toffee pink"
       ],
       "media": [
         {
@@ -1393,9 +1395,8 @@
       "brand": "CHEDOIR",
       "name": "Glow-in-the-Dark Shark Slides",
       "features": [
-        "<strong>Glow speckles in the EVA</strong> — charges in light, glows like stars after dark",
-        "<strong>Shark or unicorn</strong> — sculpted teeth and eyes, rainbow horn on top",
-        "<strong>Two looks</strong> — subtle speckle by day, full glow at night"
+        "<strong><mark style=\"background:var(--red-soft);color:inherit;border-radius:3px;padding:0 .2em\">Glow-in-the-dark EVA</mark></strong> — subtle speckles by day, bright glow at night",
+        "<strong>Sculpted shark shape</strong> — toothy sole edge and a rainbow-horn version"
       ],
       "media": [
         {
@@ -1422,20 +1423,20 @@
       "brand": "Plexo",
       "name": "GABA Bedtime Nasal Swab",
       "features": [
-        "<strong>Snap-open nasal swab</strong> — single-use, swirl 4–5× inside the nose. Sealed capsule, 100% degreased cotton",
-        "<strong>99.2% GABA + 3 botanicals</strong> — exosome delivery for faster absorption",
-        "<strong>Pocket-size</strong> — card pack for home, office naps, travel"
+        "<strong><mark style=\"background:var(--red-soft);color:inherit;border-radius:3px;padding:0 .2em\">Snap-open nasal swab</mark></strong> — single-use cotton tip with a sealed capsule",
+        "<strong>GABA + three botanicals</strong> — exosome formula (listing claim)",
+        "<strong>Pocket-size card pack</strong> — for home or travel"
       ],
       "media": [
         {
           "type": "image",
-          "src": "https://fastly.jsdelivr.net/gh/dorisss0213/beauty-innovation-media@main/product-trend-watch/media-webp/gaba-bedtime-swab-1.webp",
-          "alt": "GABA + botanicals + exosome formula"
+          "src": "https://fastly.jsdelivr.net/gh/dorisss0213/beauty-innovation-media@main/product-trend-watch/media-webp/gaba-bedtime-swab-2.webp",
+          "alt": "Snap-open swab and capsule chamber"
         },
         {
           "type": "image",
-          "src": "https://fastly.jsdelivr.net/gh/dorisss0213/beauty-innovation-media@main/product-trend-watch/media-webp/gaba-bedtime-swab-2.webp",
-          "alt": "Snap-open swab and capsule chamber"
+          "src": "https://fastly.jsdelivr.net/gh/dorisss0213/beauty-innovation-media@main/product-trend-watch/media-webp/gaba-bedtime-swab-1.webp",
+          "alt": "GABA + botanicals + exosome formula"
         },
         {
           "type": "image",
@@ -1530,8 +1531,8 @@
       "brand": "ACK 艾斯凯",
       "name": "Padded Sleep Belt — Waist Gap Support",
       "features": [
-        "<strong>Fills the waist–mattress gap</strong> — cloud-soft padding, no more suspended lower back",
-        "<strong>Zoned 3D support</strong> — back, side and abdomen zones, for back- and side-sleepers"
+        "<strong><mark style=\"background:var(--red-soft);color:inherit;border-radius:3px;padding:0 .2em\">Waist-gap support</mark></strong> — soft padding between the waist and mattress",
+        "<strong>Zoned padding</strong> — back, sides and abdomen for back and side sleepers"
       ],
       "sales": "10,000+ sold <span class=\"hedge\">(listing claim)</span>",
       "media": [
@@ -1554,9 +1555,10 @@
       "brand": "MDOG 米度狗 · BRAND TBC",
       "name": "Weighted Sleep Mask × Aromatherapy (重力助眠眼罩)",
       "features": [
-        "<strong>Weight × aroma in one mask</strong> — even pressure plus real dried botanicals or a self-heating steam insert (~45°C, up to 45 min)",
-        "<strong>Swappable scent systems</strong> — MDOG: replaceable herb pouch, 2 blends. Steam-pocket version: slots any disposable steam mask, doubles as a neck heat wrap",
-        "<strong>All-season build</strong> — cool silk-touch side, warm fleece side, layered blackout"
+        "<strong><mark style=\"background:var(--red-soft);color:inherit;border-radius:3px;padding:0 .2em\">Weighted mask + swappable inserts</mark></strong> — botanical pouch or steam pocket, depending on the version",
+        "<strong>MDOG botanical pouch</strong> — two dried-herb blends",
+        "<strong>Steam-pocket version</strong> — about 45°C for up to 45 min (listing claim), plus neck-wrap use",
+        "<strong>Dual-sided fabric</strong> — cool silk-touch and warm fleece"
       ],
       "sales": "3,000+ sold <span class=\"hedge\">(BRAND TBC, listing claim)</span>",
       "media": [
@@ -1589,8 +1591,8 @@
       "brand": "珍视明",
       "name": "Goodnight Disposable Steam Eye Mask",
       "features": [
-        "<strong>Self-heating steam mask</strong> — ~30 min of gentle warmth as a pre-sleep ritual",
-        "<strong>Wide scent range</strong> — lavender, tangerine peel, clary sage and more essential-oil blends"
+        "<strong><mark style=\"background:var(--red-soft);color:inherit;border-radius:3px;padding:0 .2em\">Self-heating steam</mark></strong> — about 30 min of gentle warmth (listing claim)",
+        "<strong>Essential-oil scents</strong> — lavender, tangerine peel and clary sage among the blends"
       ],
       "media": [
         {
@@ -1612,11 +1614,16 @@
       "brand": "MDOG 米度狗",
       "name": "Weighted Sleep Hood — Light-Blocking + Warmth",
       "features": [
-        "<strong>Full-head weighted hood</strong> — eyes and ears covered: better blackout, extra warmth",
-        "<strong>Two fabrics, four seasons</strong> — cool side for summer, plush side for winter"
+        "<strong><mark style=\"background:var(--red-soft);color:inherit;border-radius:3px;padding:0 .2em\">Weighted full-head hood</mark></strong> — covers the eyes and ears for warmth and light blocking",
+        "<strong>Two fabric sides</strong> — cool-touch and warm plush"
       ],
       "sales": "10,000+ sold <span class=\"hedge\">(listing claim)</span>",
       "media": [
+        {
+          "type": "image",
+          "src": "https://fastly.jsdelivr.net/gh/dorisss0213/beauty-innovation-media@main/product-trend-watch/media-webp/mdog-sleep-hood-3.webp",
+          "alt": "Side profile showing coverage over the eyes and ears"
+        },
         {
           "type": "image",
           "src": "https://fastly.jsdelivr.net/gh/dorisss0213/beauty-innovation-media@main/product-trend-watch/media-webp/mdog-sleep-hood-1.webp",
@@ -1626,11 +1633,6 @@
           "type": "image",
           "src": "https://fastly.jsdelivr.net/gh/dorisss0213/beauty-innovation-media@main/product-trend-watch/media-webp/mdog-sleep-hood-2.webp",
           "alt": "Dual fabric A/B sides"
-        },
-        {
-          "type": "image",
-          "src": "https://fastly.jsdelivr.net/gh/dorisss0213/beauty-innovation-media@main/product-trend-watch/media-webp/mdog-sleep-hood-3.webp",
-          "alt": "Full head and ear coverage"
         }
       ]
     },
@@ -1671,20 +1673,20 @@
       "brand": "蓝盒子 Blue Box",
       "name": "N3 Pillow-in-Pillow — Adjustable Height",
       "features": [
-        "<strong>Pillow-in-pillow</strong> — fluffy washable outer + contoured memory-foam core for neck support",
-        "<strong>Adjustable height</strong> — one insert in or out: 10 or 12 cm"
+        "<strong><mark style=\"background:var(--red-soft);color:inherit;border-radius:3px;padding:0 .2em\">Two pillow heights</mark></strong> — 10 or 12 cm",
+        "<strong>Pillow-in-pillow</strong> — contoured memory-foam core inside a plush, washable outer pillow"
       ],
       "sales": "20,000+ sold <span class=\"hedge\">(listing claim)</span>",
       "media": [
         {
+          "type": "video",
+          "src": "https://fastly.jsdelivr.net/gh/dorisss0213/beauty-innovation-media@main/product-trend-watch/media/bluebox-n3-pillow.mp4",
+          "poster": "https://fastly.jsdelivr.net/gh/dorisss0213/beauty-innovation-media@main/product-trend-watch/media-webp/bluebox-n3-pillow-poster.webp"
+        },
+        {
           "type": "image",
           "src": "https://fastly.jsdelivr.net/gh/dorisss0213/beauty-innovation-media@main/product-trend-watch/media-webp/bluebox-n3-pillow-1.webp",
           "alt": "N3 pillow-in-pillow, height adjustable"
-        },
-        {
-          "type": "video",
-          "src": "https://fastly.jsdelivr.net/gh/dorisss0213/beauty-innovation-media@main/product-trend-watch/media/bluebox-n3-pillow.mp4",
-          "poster": "https://fastly.jsdelivr.net/gh/dorisss0213/beauty-innovation-media@main/product-trend-watch/media-webp/bluebox-n3-pillow-1.webp"
         }
       ]
     }
